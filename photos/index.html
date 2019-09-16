@@ -124,7 +124,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2019-09-16</span>
-            <span class="time">21:53:00</span>
+            <span class="time">22:34:17</span>
           </span>
           
         </div>
@@ -175,14 +175,14 @@
     }
     .box li{
     float: left;
-    width: 25%;
+    width: 40%;
     position: relative;
     overflow: hidden;
     text-align: center;
     list-style: none;
     margin: 0;
     /*display: inline;*/
-    padding: 0;
+    padding-right:20px;
     height: 360px;
     }
     .box li span{
@@ -206,7 +206,8 @@
         position: relative;
         padding: 0px;
         height: auto;
-        width: 100%;
+        width:100%;
+        height:100%;
     }
 
 
@@ -230,31 +231,12 @@ div#posts.posts-expand {
 }
 
 .box span strong{
-    background: rgba(0,0,0,0.4);
+    background: rgb(0,99,229);
     padding: 20px;
 }
 
 .posts-expand .post-title {
     display: none;
-}
-.title{
-    display: inline-block;
-    vertical-align: middle;
-    /* background: url(https://image.idealli.com/bg11.jpg); */
-    font: 85px/250px 'ChaletComprimeMilanSixty';
-    background-position: left bottom !important;
-    color: #fff;
-    background-size: 100% auto !important; 
-    -webkit-background-size: cover; 
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    width: 100%;
-    text-align: center;
-    border: unset;
-    height: 700px;
-    cursor: unset !important;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
 }
 .btn-more-posts{
     display: inline-block;
@@ -316,6 +298,7 @@ div#posts.posts-expand {
     background: #00050b !important;
 }
 
+
 </style>
 
 <div id="box" class="box"></div>
@@ -361,7 +344,7 @@ function loadXMLDoc(xmlUrl)
     return xmlDoc; 
 }
 
-var xmllink="https://hexophoto-1259178461.cos.ap-beijing.myqcloud.com/"
+var xmllink="https://hexophoto-1259178461.cos.ap-beijing.myqcloud.com"
 //访问域名链接就是我上面提到的那个访问域名xml链接
 
 xmlDoc=loadXMLDoc(xmllink);
@@ -396,7 +379,7 @@ for (var i = 0; i < content.length; i++) {
     box.appendChild(conBox);
     var item=document.createElement("div");
     var title=content[i][0].url;
-    item.innerHTML="<button class=title style=background:url("+xmllink+'/'+title+"封面.jpg"+");><span style=display:inline;><strong style=color:#f0f3f6; >"+title.substring(0,title.length-1)+"</strong></span></button>";
+    item.innerHTML="<button class=title style=background:url("+xmllink+'/'+title+"封面.jpg"+");><span style=display:inline;><strong style=color:#fff; >"+title.substring(0,title.length-1)+"</strong></span></button>";
     conBox.appendChild(item);
 
     for (var j = 1; j < content[i].length && j < showNum+1; j++) {
