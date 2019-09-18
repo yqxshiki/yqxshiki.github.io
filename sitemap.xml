@@ -4,7 +4,42 @@
   <url>
     <loc>http://yoursite.com/photos/index.html</loc>
     
-    <lastmod>2019-09-17T13:19:03.228Z</lastmod>
+    <lastmod>2019-09-18T07:45:32.271Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/09/18/Vue%E6%8C%87%E4%BB%A4/</loc>
+    
+    <lastmod>2019-09-18T07:09:13.311Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/09/16/hexo/</loc>
+    
+    <lastmod>2019-09-18T07:08:03.006Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2019-09-18T03:23:24.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2019-09-18T03:23:23.898Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/09/16/hello-world/</loc>
+    
+    <lastmod>2019-09-18T02:57:12.830Z</lastmod>
     
   </url>
   
@@ -12,34 +47,6 @@
     <loc>http://yoursite.com/withme/index.html</loc>
     
     <lastmod>2019-09-16T12:50:34.457Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
-    
-    <lastmod>2019-09-16T12:07:34.370Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
-    
-    <lastmod>2019-09-16T12:07:11.245Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/09/16/hexo/</loc>
-    
-    <lastmod>2019-09-16T09:41:14.951Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/09/16/hello-world/</loc>
-    
-    <lastmod>2019-09-16T09:33:39.018Z</lastmod>
     
   </url>
   

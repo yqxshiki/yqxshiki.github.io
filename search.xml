@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[hexo搭建]]></title>
+    <title><![CDATA[Vue初识--vue指令]]></title>
+    <url>%2F2019%2F09%2F18%2FVue%E6%8C%87%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[Vue介绍Vue 是目前主流前端三大框架之一，是一套渐进式框架。他的作者是一位华人-尤雨溪，有中文官方文档Vue中文官方文档在这里我们选择用CDN的方式来引入1&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt; Vue实例每一个Vue都是通过new Vue开始的 123456789101112let vm =new Vue(&#123; el:&quot;&quot;, data:&#123; &#125;, methods:&#123; &#125;, computed:&#123; &#125;&#125;) 在HTML中我们可以使用 这种来插值. v-ifv-if 绑定的值在data中定义,根据定义值的真假来插入或者移除元素 1234567891011&lt;div id=&quot;app&quot;&gt; &lt;p v-if=&quot;scok&quot;&gt;你能看到我吗？&lt;/p&gt;&lt;/div&gt; let vm =new Vue(&#123; el:&quot;#app&quot;, data: &#123; scok:true &#125;&#125;) 当 scok的值为 false null undefined 0 时，都不显示,为移除元素。 v-showv-show 和v-if相识 都是通过判断boolean 来显示或者不显示元素,当定义的值为 false null undefined 0是 ,不显示 12345678910&lt;div id=&quot;app&quot;&gt;&lt;p v-show=&quot;msg&quot;&gt;你猜你看得到我吗？&lt;/p&gt;&lt;/div&gt;let vm =new Vue(&#123; el:&quot;#app&quot;, data:&#123; msg: null &#125;&#125;) v-show 和 v-if 的区别v-show 当不显示时 可以看到是用css 将display:none; 来就行隐藏 v-show 安全性不高，主要用于特殊类型的切换【显示与隐藏】,不适合做后台管理系统 而v-if 本质是移除Dom节点适合后台管理系统安全性比较高 v-modelv-model是数据双向绑定 123456789101112131415161718192021222324252627282930313233343536&lt;div id=&quot;app&quot;&gt; &lt;input type=&quot;text&quot; v-model=&quot;msg&quot;&gt; &#123;&#123;msg&#125;&#125; &lt;hr&gt; &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; v-model=&quot;list&quot;&gt; &#123;&#123;list&#125;&#125; &lt;hr&gt; &lt;input type=&quot;radio&quot; value=&quot;true&quot; name=&quot;radio&quot; v-model=&quot;radio&quot;&gt; &lt;label for=&quot;&quot;&gt;true&lt;/label&gt; &lt;input type=&quot;radio&quot; value=&quot;false&quot; name=&quot;radio&quot; v-model=&quot;radio&quot;&gt; &lt;label for=&quot;&quot;&gt;false&lt;/label&gt; &#123;&#123;radio&#125;&#125; &lt;hr&gt; &lt;input type=&quot;checkbox&quot; value=&quot;apple&quot; v-model=&quot;checkboxlist&quot;&gt; &lt;input type=&quot;checkbox&quot; value=&quot;orange&quot; v-model=&quot;checkboxlist&quot;&gt; &lt;input type=&quot;checkbox&quot; value=&quot;Banana&quot; v-model=&quot;checkboxlist&quot;&gt; &#123;&#123;checkboxlist&#125;&#125; &lt;hr&gt; &lt;select v-model=&quot;array&quot;&gt; &lt;option&gt;a&lt;/option&gt; &lt;option&gt;b&lt;/option&gt; &lt;option&gt;c&lt;/option&gt; &lt;option&gt;d&lt;/option&gt; &lt;/select&gt; &#123;&#123;array&#125;&#125;&lt;/div&gt; let vm =new Vue(&#123; el:&quot;#app&quot;, data:&#123; msg:&quot;&quot;, list:true radio:[], checkboxlist: [], array:[] &#125;&#125;) 通过v-model绑定,当用户在input框中输入数据时,会通过 显示出来 当是单选框时要注意，绑定的值要是数组[] 多个复选框时,绑定的值也要是数组[] 下拉列表时,绑定的值也要是数组[]]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[利用git github hexo 搭建属于自己的个人博客]]></title>
     <url>%2F2019%2F09%2F16%2Fhexo%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[1 安装git之前在学数据库的时候，用的是windows系统,在cmd中敲命令,用得不是很舒服，安装git 下载地址：git 安装：一路next就行 安装好后：打开Git Bash 输入： git version 这样就安装好了 2 安装nodenode是JavaScript的运行环境,其中npm是包管理工具，在之后我们需要利用npm下载一系列的东西 下载地址：node 安装：一路next就行,但在Custom Setup这一步记得选 Add to PATH 安装好后：打开cmd 输入： node -v 这样就安装好了 3 安装hexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 先创建一个文件夹，打开git bash ，然后cd到当前文件夹,运行 这是在全局安装hexocnpm install -g hexo-cli初始化项目 下载需要相应的文件hexo init cnpm install完成以后在文件夹中会获得不少文件 4 和github关联没有注册github的点击这里github,注册一个账号，然后创建一个存储库 在输入Repository name时要注意,名字要与你的github用户名一样，例如：yqxshiki.github.io,前面是你自己的名字后面加上 .github.io]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>github</tag>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
