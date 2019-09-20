@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2019-09-20T09:10:24.950Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2019-09-20T09:10:18.649Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/photos/index.html</loc>
     
-    <lastmod>2019-09-19T07:25:58.583Z</lastmod>
+    <lastmod>2019-09-20T09:10:09.117Z</lastmod>
     
   </url>
   
@@ -19,20 +33,6 @@
     <loc>http://yoursite.com/2019/09/16/hexo/</loc>
     
     <lastmod>2019-09-18T07:08:03.006Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
-    
-    <lastmod>2019-09-18T03:23:24.781Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
-    
-    <lastmod>2019-09-18T03:23:23.898Z</lastmod>
     
   </url>
   
