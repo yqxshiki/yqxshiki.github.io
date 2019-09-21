@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-circle.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -129,20 +136,20 @@
 
 
 
-<meta name="description" content="Vue介绍Vue 是目前主流前端三大框架之一，是一套渐进式框架。他的作者是一位华人-尤雨溪，有中文官方文档Vue中文官方文档在这里我们选择用CDN的方式来引入1&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;">
+<meta name="description" content="Vue介绍Vue 是目前主流前端三大框架之一，是一套渐进式框架。他的作者是一位华人-尤雨溪，有中文官方文档Vue中文官方文档 在这里我们选择用CDN的方式来引入 1&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  Vue实例每一个Vue都是通过new Vue开始的">
 <meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue初识--vue指令">
 <meta property="og:url" content="http://yoursite.com/2019/09/18/Vue指令/index.html">
 <meta property="og:site_name" content="Scrook.Blog">
-<meta property="og:description" content="Vue介绍Vue 是目前主流前端三大框架之一，是一套渐进式框架。他的作者是一位华人-尤雨溪，有中文官方文档Vue中文官方文档在这里我们选择用CDN的方式来引入1&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;">
+<meta property="og:description" content="Vue介绍Vue 是目前主流前端三大框架之一，是一套渐进式框架。他的作者是一位华人-尤雨溪，有中文官方文档Vue中文官方文档 在这里我们选择用CDN的方式来引入 1&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  Vue实例每一个Vue都是通过new Vue开始的">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://blog-1259178461.cos.ap-chengdu.myqcloud.com/Vue%E6%8C%87%E4%BB%A4/v-show.png">
 <meta property="og:image" content="https://blog-1259178461.cos.ap-chengdu.myqcloud.com/Vue%E6%8C%87%E4%BB%A4/v-if.png">
-<meta property="og:updated_time" content="2019-09-18T07:09:13.311Z">
+<meta property="og:updated_time" content="2019-09-21T03:06:53.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue初识--vue指令">
-<meta name="twitter:description" content="Vue介绍Vue 是目前主流前端三大框架之一，是一套渐进式框架。他的作者是一位华人-尤雨溪，有中文官方文档Vue中文官方文档在这里我们选择用CDN的方式来引入1&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;">
+<meta name="twitter:description" content="Vue介绍Vue 是目前主流前端三大框架之一，是一套渐进式框架。他的作者是一位华人-尤雨溪，有中文官方文档Vue中文官方文档 在这里我们选择用CDN的方式来引入 1&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  Vue实例每一个Vue都是通过new Vue开始的">
 <meta name="twitter:image" content="https://blog-1259178461.cos.ap-chengdu.myqcloud.com/Vue%E6%8C%87%E4%BB%A4/v-show.png">
 
 
@@ -153,7 +160,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -198,12 +205,14 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
+        <a href="https://github.com/you"><img style="position:absolute; top:0; left:0;border:0" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_green_007200.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+     
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta custom-logo">
     
 
     <div class="custom-logo-site-title">
@@ -363,7 +372,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Scrook">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/photos.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -456,7 +465,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  716
+                  718
                 </span>
               
 
@@ -493,9 +502,9 @@
       
 
       
-        <h4 id="Vue介绍"><a href="#Vue介绍" class="headerlink" title="Vue介绍"></a>Vue介绍</h4><p>Vue 是目前主流前端三大框架之一，是一套渐进式框架。他的作者是一位华人-尤雨溪，有中文官方文档<br><a href="https://vuejs.bootcss.com/v2/guide/" target="_blank" rel="noopener">Vue中文官方文档</a></p><p>在这里我们选择用CDN的方式来引入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure><a id="more"></a>
-
-
+        <h4 id="Vue介绍"><a href="#Vue介绍" class="headerlink" title="Vue介绍"></a>Vue介绍</h4><p>Vue 是目前主流前端三大框架之一，是一套渐进式框架。他的作者是一位华人-尤雨溪，有中文官方文档<br><a href="https://vuejs.bootcss.com/v2/guide/" target="_blank" rel="noopener">Vue中文官方文档</a></p>
+<p>在这里我们选择用CDN的方式来引入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 <h4 id="Vue实例"><a href="#Vue实例" class="headerlink" title="Vue实例"></a>Vue实例</h4><p>每一个Vue都是通过new Vue开始的</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let vm =new Vue(&#123;</span><br><span class="line">    el:&quot;&quot;,</span><br><span class="line">    data:&#123;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">    computed:&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -517,9 +526,8 @@
 <p>通过v-model绑定,当用户在input框中输入数据时,会通过</p>
 显示出来
 
-<p>当是单选框时要注意，绑定的值要是数组[]</p>
-<pre><code>多个复选框时,绑定的值也要是数组[]
-下拉列表时,绑定的值也要是数组[]</code></pre>
+<p>当是单选框时要注意，绑定的值要是数组[]<br>    多个复选框时,绑定的值也要是数组[]<br>    下拉列表时,绑定的值也要是数组[]</p>
+
       
     </div>
     
@@ -527,7 +535,11 @@
     
   <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
     
-
+  <div>
+      
+        
+      
+</div>
     
 
     
@@ -653,6 +665,8 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/images/photos.jpg" alt="Scrook">
+            
               <p class="site-author-name" itemprop="name">Scrook</p>
               <p class="site-description motion-element" itemprop="description">世人万千种，浮云莫去求，斯人若彩虹，遇上方知有。</p>
           </div>
@@ -674,10 +688,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
-                
+                </a>
               </div>
             
 
@@ -811,7 +825,8 @@ show_date_time();
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -827,6 +842,12 @@ show_date_time();
     
     <span title="Site words total count">1.1k</span>
   
+</div>
+// 本站访客数
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
 </div>
 
 
