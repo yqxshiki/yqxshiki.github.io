@@ -5,10 +5,11 @@
     <url>%2F2019%2F09%2F24%2Fpixel%2F</url>
     <content type="text"><![CDATA[pxpx是pixel的缩写,像素是指基本原色素及其灰度的基本编码。px是相对长度单位，在一般的开发情况下，我们选择px，但是并不是所有情况都用px来解决问题 rpxrpx主要收用于在做微信小程序开发时用到的一种单位,它能够在不同手机上面自适应屏幕尺寸. 在css中px 为css像素也叫逻辑像素;设备像素是设备屏幕的物理像素，任何设备的物理像素的数量都是固定的, DPRDPR是设备像素比,在默认缩放为100%的情况下，设备像素和逻辑像素的比值.iphone 6的设备像素为750，而iphone 6的逻辑像素为375 dpr =2,也就是1px =2rpx,因此我们经常在微信小程序里面用iphone 6当模板进行开发. emem也是相对长度单位，相对于对象文字的字体大小，如果没有设置，则默认为浏览器的默认字体大小. em的值是自己字体大小，如果没有设置就是继承父级元素的字体大小，依次向上找，如果打没有设置就是浏览器默认字体大小 remrem 是css3中新增的 (root em)，和em类似都是字体大小。但是它是相对HTML根元素的。当改变根元素的字体大小时，可以同时更改所有的字体大小。 vw–vhvw和vh是视口单位(viewport),就是依据浏览器窗口大小的单位。 1vw=可视窗口的宽度 * 1% 。 1vh=可视窗口的高度 * 1% 。]]></content>
       <categories>
-        <category>-web前端 -微信小程序</category>
+        <category>web前端</category>
       </categories>
       <tags>
-        <tag>-css</tag>
+        <tag>css</tag>
+        <tag>微信小程序</tag>
       </tags>
   </entry>
   <entry>
