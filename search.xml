@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git-bash基础命令行使用]]></title>
+    <url>%2F2019%2F10%2F08%2Fgit-bash%2F</url>
+    <content type="text"><![CDATA[在注册使用了github后，我们也应该学会使用git 来提交管理代码 git介绍是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理 git常用命令 配置git 用户名和密码 123git config --global user.name xxx(用户名)git confit --global user.email xxx(邮箱) 查看当前git的配置 1git config --list 初始化git 仓库 1git init 查看当前仓库的状态 1git status 将需要提交的代码文件添加的暂存区 123git add xxx(文件名)git add xxx(文件名) xxx(文件名) 上传多个文件时中间用空格分开git add . (.是提交当前文件夹内的所有文件) 将暂存区中的代码提交到本地仓库，形成一个版本 1git commit -m &quot;备注&quot; 查看本地仓库中的历史提交版本 1git log 将暂存区中文件删除 1git rm --cached xxx(文件名) 用暂存区中的文件覆盖工作目录中的文件 1git checkout --xxx(文件名) 回滚到本地仓库中特定版本并覆盖暂存区和工作目录 123git reset --hard commitID(commitID可以到git log中查看提交编号)如果有版本1，版本2（后提交），当回滚到版本1时版本2会被自动删除。 git 分支相关命令 查看分支 1git branch 创建分支 1git branch xxx(分支名) 切换分支 1git checkout xxx(分支名) 创建并切换分支 1git checkout -b xxx(分支名) 删除分支 1git branch -d xxx(分支名) 强制删除分支 1git branch -D xxx(分支名) 合并分支 1git merge xxx(需要当前主分支上，合并的分支名) git 相关命令 从远程仓库获取代码（拉取所有版本到本地） 1git clone origin 从远程仓库拉取代码（拉取最新版本到本地，开发过程中使用） 1git pull origin master 向远程仓库推送代码 123git push origin master(本地分支名称)：master(远程分支名称)如果本地分支同远程分支名称一样，可以只写一个 删除当前别名所对应的远程仓库地址 1git remote remove origin]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[了解px rpx em rem vw wh]]></title>
     <url>%2F2019%2F09%2F24%2Fpixel%2F</url>
     <content type="text"><![CDATA[pxpx是pixel的缩写,像素是指基本原色素及其灰度的基本编码。px是相对长度单位，在一般的开发情况下，我们选择px，但是并不是所有情况都用px来解决问题 rpxrpx主要收用于在做微信小程序开发时用到的一种单位,它能够在不同手机上面自适应屏幕尺寸. 在css中px 为css像素也叫逻辑像素;设备像素是设备屏幕的物理像素，任何设备的物理像素的数量都是固定的, DPRDPR是设备像素比,在默认缩放为100%的情况下，设备像素和逻辑像素的比值.iphone 6的设备像素为750，而iphone 6的逻辑像素为375 dpr =2,也就是1px =2rpx,因此我们经常在微信小程序里面用iphone 6当模板进行开发. emem也是相对长度单位，相对于对象文字的字体大小，如果没有设置，则默认为浏览器的默认字体大小. em的值是自己字体大小，如果没有设置就是继承父级元素的字体大小，依次向上找，如果打没有设置就是浏览器默认字体大小 remrem 是css3中新增的 (root em)，和em类似都是字体大小。但是它是相对HTML根元素的。当改变根元素的字体大小时，可以同时更改所有的字体大小。 vw–vhvw和vh是视口单位(viewport),就是依据浏览器窗口大小的单位。 1vw=可视窗口的宽度 * 1% 。 1vh=可视窗口的高度 * 1% 。]]></content>

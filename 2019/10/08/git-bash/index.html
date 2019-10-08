@@ -125,7 +125,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="git,">
 
 
 
@@ -136,16 +136,18 @@
 
 
 
-<meta name="description" content="世人万千种，浮云莫去求，斯人若彩虹，遇上方知有。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Scrook.Blog">
-<meta property="og:url" content="http://yqxshiki.com/index.html">
+<meta name="description" content="在注册使用了github后，我们也应该学会使用git 来提交管理代码   git介绍是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理 git常用命令 配置git 用户名和密码  123git config --global user.name xxx(用户名)git confit --global user.email xxx(邮箱)   查看当前git的配置  1">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git-bash基础命令行使用">
+<meta property="og:url" content="http://yqxshiki.com/2019/10/08/git-bash/index.html">
 <meta property="og:site_name" content="Scrook.Blog">
-<meta property="og:description" content="世人万千种，浮云莫去求，斯人若彩虹，遇上方知有。">
+<meta property="og:description" content="在注册使用了github后，我们也应该学会使用git 来提交管理代码   git介绍是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理 git常用命令 配置git 用户名和密码  123git config --global user.name xxx(用户名)git confit --global user.email xxx(邮箱)   查看当前git的配置  1">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-08T10:25:52.187Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Scrook.Blog">
-<meta name="twitter:description" content="世人万千种，浮云莫去求，斯人若彩虹，遇上方知有。">
+<meta name="twitter:title" content="git-bash基础命令行使用">
+<meta name="twitter:description" content="在注册使用了github后，我们也应该学会使用git 来提交管理代码   git介绍是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理 git常用命令 配置git 用户名和密码  123git config --global user.name xxx(用户名)git confit --global user.email xxx(邮箱)   查看当前git的配置  1">
 
 
 
@@ -175,13 +177,13 @@
 
 
 
-  <link rel="canonical" href="http://yqxshiki.com/">
+  <link rel="canonical" href="http://yqxshiki.com/2019/10/08/git-bash/">
 
 
 
 
 
-  <title>Scrook.Blog</title>
+  <title>git-bash基础命令行使用 | Scrook.Blog</title>
   
 
 
@@ -200,8 +202,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
         <a href="https://github.com/yqxshiki"><img style="position:absolute; top:0; left:0;border:0" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_green_007200.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
      
@@ -348,9 +349,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -380,9 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/08/git-bash/" itemprop="url">git-bash基础命令行使用</a></h1>
+          <h1 class="post-title" itemprop="name headline">git-bash基础命令行使用</h1>
         
 
         <div class="post-meta">
@@ -423,6 +422,11 @@
           
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
           
 
           
@@ -473,21 +477,114 @@
       
 
       
-        
-          
-          在注册使用了github后，我们也应该学会使用git 来提交管理代码
+        <p>在注册使用了github后，我们也应该学会使用git 来提交管理代码</p>
+<hr>
+<hr>
+<h2 id="git介绍"><a href="#git介绍" class="headerlink" title="git介绍"></a>git介绍</h2><p>是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理</p>
+<h2 id="git常用命令"><a href="#git常用命令" class="headerlink" title="git常用命令"></a>git常用命令</h2><ul>
+<li><h4 id="配置git-用户名和密码"><a href="#配置git-用户名和密码" class="headerlink" title="配置git 用户名和密码"></a>配置git 用户名和密码</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name xxx(用户名)</span><br><span class="line"></span><br><span class="line">git confit --global user.email xxx(邮箱)</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li><h4 id="查看当前git的配置"><a href="#查看当前git的配置" class="headerlink" title="查看当前git的配置"></a>查看当前git的配置</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
 
-git介绍是一个开源的分布
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/08/git-bash/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<ul>
+<li><h4 id="初始化git-仓库"><a href="#初始化git-仓库" class="headerlink" title="初始化git 仓库"></a>初始化git 仓库</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="查看当前仓库的状态"><a href="#查看当前仓库的状态" class="headerlink" title="查看当前仓库的状态"></a>查看当前仓库的状态</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="将需要提交的代码文件添加的暂存区"><a href="#将需要提交的代码文件添加的暂存区" class="headerlink" title="将需要提交的代码文件添加的暂存区"></a>将需要提交的代码文件添加的暂存区</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add xxx(文件名)</span><br><span class="line">git add xxx(文件名) xxx(文件名)  上传多个文件时中间用空格分开</span><br><span class="line">git add .  (.是提交当前文件夹内的所有文件)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="将暂存区中的代码提交到本地仓库，形成一个版本"><a href="#将暂存区中的代码提交到本地仓库，形成一个版本" class="headerlink" title="将暂存区中的代码提交到本地仓库，形成一个版本"></a>将暂存区中的代码提交到本地仓库，形成一个版本</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;备注&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="查看本地仓库中的历史提交版本"><a href="#查看本地仓库中的历史提交版本" class="headerlink" title="查看本地仓库中的历史提交版本"></a>查看本地仓库中的历史提交版本</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="将暂存区中文件删除"><a href="#将暂存区中文件删除" class="headerlink" title="将暂存区中文件删除"></a>将暂存区中文件删除</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached  xxx(文件名)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="用暂存区中的文件覆盖工作目录中的文件"><a href="#用暂存区中的文件覆盖工作目录中的文件" class="headerlink" title="用暂存区中的文件覆盖工作目录中的文件"></a>用暂存区中的文件覆盖工作目录中的文件</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout --xxx(文件名)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="回滚到本地仓库中特定版本并覆盖暂存区和工作目录"><a href="#回滚到本地仓库中特定版本并覆盖暂存区和工作目录" class="headerlink" title="回滚到本地仓库中特定版本并覆盖暂存区和工作目录"></a>回滚到本地仓库中特定版本并覆盖暂存区和工作目录</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard commitID(commitID可以到git log中查看提交编号)</span><br><span class="line"></span><br><span class="line">如果有版本1，版本2（后提交），当回滚到版本1时版本2会被自动删除。</span><br></pre></td></tr></table></figure>
+
+<h2 id="git-分支相关命令"><a href="#git-分支相关命令" class="headerlink" title="git 分支相关命令"></a>git 分支相关命令</h2><ul>
+<li><h4 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch xxx(分支名)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout xxx(分支名)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="创建并切换分支"><a href="#创建并切换分支" class="headerlink" title="创建并切换分支"></a>创建并切换分支</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b xxx(分支名)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d xxx(分支名)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="强制删除分支"><a href="#强制删除分支" class="headerlink" title="强制删除分支"></a>强制删除分支</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -D xxx(分支名)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge  xxx(需要当前主分支上，合并的分支名)</span><br></pre></td></tr></table></figure>
+
+<h2 id="git-相关命令"><a href="#git-相关命令" class="headerlink" title="git  相关命令"></a>git  相关命令</h2><ul>
+<li><h4 id="从远程仓库获取代码（拉取所有版本到本地）"><a href="#从远程仓库获取代码（拉取所有版本到本地）" class="headerlink" title="从远程仓库获取代码（拉取所有版本到本地）"></a>从远程仓库获取代码（拉取所有版本到本地）</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone origin</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="从远程仓库拉取代码（拉取最新版本到本地，开发过程中使用）"><a href="#从远程仓库拉取代码（拉取最新版本到本地，开发过程中使用）" class="headerlink" title="从远程仓库拉取代码（拉取最新版本到本地，开发过程中使用）"></a>从远程仓库拉取代码（拉取最新版本到本地，开发过程中使用）</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="向远程仓库推送代码"><a href="#向远程仓库推送代码" class="headerlink" title="向远程仓库推送代码"></a>向远程仓库推送代码</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push origin master(本地分支名称)：master(远程分支名称)</span><br><span class="line"></span><br><span class="line">如果本地分支同远程分支名称一样，可以只写一个</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="删除当前别名所对应的远程仓库地址"><a href="#删除当前别名所对应的远程仓库地址" class="headerlink" title="删除当前别名所对应的远程仓库地址"></a>删除当前别名所对应的远程仓库地址</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote remove origin</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -496,6 +593,37 @@ git介绍是一个开源的分布
   <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
     
   <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/10/08/git-bash/">git-bash基础命令行使用</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Scrook 的个人博客">Scrook</a></p>
+  <p><span>发布时间:</span>2019年10月08日 - 17:10</p>
+  <p><span>最后更新:</span>2019年10月08日 - 18:10</p>
+  <p><span>原始链接:</span><a href="/2019/10/08/git-bash/" title="git-bash基础命令行使用">http://yqxshiki.com/2019/10/08/git-bash/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yqxshiki.com/2019/10/08/git-bash/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
       
 </div>
     
@@ -506,400 +634,36 @@ git介绍是一个开源的分布
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yqxshiki.com/2019/09/24/pixel/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Scrook">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/photos.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Scrook.Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/24/pixel/" itemprop="url">了解px rpx em rem vw wh</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-24T12:48:29+08:00">
-                2019-09-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/web前端/" itemprop="url" rel="index">
-                    <span itemprop="name">web前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
           
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/09/24/pixel/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/24/pixel/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  413
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          pxpx是pixel的缩写,像素是指基本原色素及其灰度的基本编码。px是相对长度单位，在一般的开发情
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/24/pixel/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/24/pixel/" rel="next" title="了解px rpx em rem vw wh">
+                <i class="fa fa-chevron-left"></i> 了解px rpx em rem vw wh
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-  <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
-    
-  <div>
-      
-</div>
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yqxshiki.com/2019/09/18/Vue指令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Scrook">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/photos.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Scrook.Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/18/Vue指令/" itemprop="url">Vue初识--vue指令</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-18T10:58:37+08:00">
-                2019-09-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/web前端/" itemprop="url" rel="index">
-                    <span itemprop="name">web前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/09/18/Vue指令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/18/Vue指令/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  651
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          Vue介绍Vue 是目前主流前端三大框架之一，是一套渐进式框架。他的作者是一位华人-尤雨溪，有中文官
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/18/Vue指令/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-  <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
-    
-  <div>
-      
-</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -909,381 +673,32 @@ git介绍是一个开源的分布
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yqxshiki.com/2019/09/16/hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Scrook">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/photos.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Scrook.Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/16/hexo/" itemprop="url">利用git github hexo 搭建属于自己的个人博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-16T17:40:55+08:00">
-                2019-09-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/09/16/hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/16/hexo/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  337
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          1 安装git之前在学数据库的时候，用的是windows系统,在cmd中敲命令,用得不是很舒服，安装
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/16/hexo/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-  <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
-    
-  <div>
-      
-</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yqxshiki.com/2019/09/16/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Scrook">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/photos.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Scrook.Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/16/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-16T16:03:44+08:00">
-                2019-09-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/09/16/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/16/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  73
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Welcome to Hexo! This is your very first post. Che
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/16/hello-world/#more" rel="contents">
-              Read more &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     </div>
-    
-    
-    
-  <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
-    
-  <div>
-      
-</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
 
 
-          </div>
-          
-
-
-          
 
         </div>
         
@@ -1304,8 +719,17 @@ git介绍是一个开源的分布
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1409,6 +833,22 @@ show_date_time();
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git介绍"><span class="nav-number">1.</span> <span class="nav-text">git介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git常用命令"><span class="nav-number">2.</span> <span class="nav-text">git常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#配置git-用户名和密码"><span class="nav-number">2.0.1.</span> <span class="nav-text">配置git 用户名和密码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看当前git的配置"><span class="nav-number">2.0.2.</span> <span class="nav-text">查看当前git的配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化git-仓库"><span class="nav-number">2.0.3.</span> <span class="nav-text">初始化git 仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看当前仓库的状态"><span class="nav-number">2.0.4.</span> <span class="nav-text">查看当前仓库的状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将需要提交的代码文件添加的暂存区"><span class="nav-number">2.0.5.</span> <span class="nav-text">将需要提交的代码文件添加的暂存区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将暂存区中的代码提交到本地仓库，形成一个版本"><span class="nav-number">2.0.6.</span> <span class="nav-text">将暂存区中的代码提交到本地仓库，形成一个版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看本地仓库中的历史提交版本"><span class="nav-number">2.0.7.</span> <span class="nav-text">查看本地仓库中的历史提交版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将暂存区中文件删除"><span class="nav-number">2.0.8.</span> <span class="nav-text">将暂存区中文件删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用暂存区中的文件覆盖工作目录中的文件"><span class="nav-number">2.0.9.</span> <span class="nav-text">用暂存区中的文件覆盖工作目录中的文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回滚到本地仓库中特定版本并覆盖暂存区和工作目录"><span class="nav-number">2.0.10.</span> <span class="nav-text">回滚到本地仓库中特定版本并覆盖暂存区和工作目录</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#git-分支相关命令"><span class="nav-number">3.</span> <span class="nav-text">git 分支相关命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看分支"><span class="nav-number">3.0.1.</span> <span class="nav-text">查看分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建分支"><span class="nav-number">3.0.2.</span> <span class="nav-text">创建分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#切换分支"><span class="nav-number">3.0.3.</span> <span class="nav-text">切换分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建并切换分支"><span class="nav-number">3.0.4.</span> <span class="nav-text">创建并切换分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除分支"><span class="nav-number">3.0.5.</span> <span class="nav-text">删除分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#强制删除分支"><span class="nav-number">3.0.6.</span> <span class="nav-text">强制删除分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合并分支"><span class="nav-number">3.0.7.</span> <span class="nav-text">合并分支</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-相关命令"><span class="nav-number">4.</span> <span class="nav-text">git  相关命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#从远程仓库获取代码（拉取所有版本到本地）"><span class="nav-number">4.0.1.</span> <span class="nav-text">从远程仓库获取代码（拉取所有版本到本地）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从远程仓库拉取代码（拉取最新版本到本地，开发过程中使用）"><span class="nav-number">4.0.2.</span> <span class="nav-text">从远程仓库拉取代码（拉取最新版本到本地，开发过程中使用）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向远程仓库推送代码"><span class="nav-number">4.0.3.</span> <span class="nav-text">向远程仓库推送代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除当前别名所对应的远程仓库地址"><span class="nav-number">4.0.4.</span> <span class="nav-text">删除当前别名所对应的远程仓库地址</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1622,6 +1062,10 @@ show_date_time();
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1639,6 +1083,18 @@ show_date_time();
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yqxshiki.com/2019/10/08/git-bash/';
+          this.page.identifier = '2019/10/08/git-bash/';
+          this.page.title = 'git-bash基础命令行使用';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
