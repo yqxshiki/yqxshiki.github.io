@@ -143,7 +143,7 @@
 <meta property="og:site_name" content="Scrook.Blog">
 <meta property="og:description" content=".main-inner{         width: 100%;     }     .main {     padding-bottom: 150px;     margin-top: 0px;     background: rgb(238,238,238);     }     .main-inner{         margin-top: unset;     }     .">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-20T09:10:09.117Z">
+<meta property="og:updated_time" content="2019-10-10T03:56:11.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="照片分享">
 <meta name="twitter:description" content=".main-inner{         width: 100%;     }     .main {     padding-bottom: 150px;     margin-top: 0px;     background: rgb(238,238,238);     }     .main-inner{         margin-top: unset;     }     .">
@@ -402,7 +402,7 @@
     .imgbox{
      width: 100%;
      overflow: hidden;
-     height: 30px;
+     height: 200px;
      border-right: 1px solid #bcbcbc;
     }
     .box{
@@ -422,12 +422,12 @@
     margin: 0;
     /*display: inline;*/
     padding-right:20px;
-    height: 360px;
+    height: 320px;
     }
     .box li span{
     display: block;
     padding: 4% 7% 10% 7%;
-    min-height: 80px;
+    min-height: 60px;
     background: #fff;
     color: #fff;
     font-size: 18px;
@@ -643,7 +643,7 @@ for (var i = 0; i < content.length; i++) {
     for (var j = 1; j < content[i].length && j < showNum+1; j++) {
         var con=content[i][j].url;
         var item=document.createElement("li");
-        item.innerHTML="<div class=imgbox id=imgbox style=height:"+wid+"px;><img class=imgitem src="+xmllink+'/'+title+con+" alt="+con+"></div><span>"+con.substring(0,con.length-4)+"</span><p>上传于"+content[i][j].date+"</p>";
+        item.innerHTML="<div class=imgbox id=imgbox><img class=imgitem src="+xmllink+'/'+title+con+" alt="+con+"></div><span>"+con.substring(0,con.length-4)+"</span><p>上传于"+content[i][j].date+"</p>";
         conBox.appendChild(item);
     }
     if(content[i].length > showNum){
