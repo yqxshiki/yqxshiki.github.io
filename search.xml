@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[将博客搬至CSDN]]></title>
+    <url>%2F2019%2F10%2F15%2FCSDN%2F</url>
+    <content type="text"><![CDATA[从今日起，将blog搬至CSDN]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[git-bash基础命令行使用]]></title>
     <url>%2F2019%2F10%2F08%2Fgit-bash%2F</url>
     <content type="text"><![CDATA[在注册使用了github后，我们也应该学会使用git 来提交管理代码 git介绍是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理 git常用命令 配置git 用户名和密码 123git config --global user.name xxx(用户名)git confit --global user.email xxx(邮箱) 查看当前git的配置 1git config --list 初始化git 仓库 1git init 查看当前仓库的状态 1git status 将需要提交的代码文件添加的暂存区 123git add xxx(文件名)git add xxx(文件名) xxx(文件名) 上传多个文件时中间用空格分开git add . (.是提交当前文件夹内的所有文件) 将暂存区中的代码提交到本地仓库，形成一个版本 1git commit -m &quot;备注&quot; 查看本地仓库中的历史提交版本 1git log 将暂存区中文件删除 1git rm --cached xxx(文件名) 用暂存区中的文件覆盖工作目录中的文件 1git checkout --xxx(文件名) 回滚到本地仓库中特定版本并覆盖暂存区和工作目录 123git reset --hard commitID(commitID可以到git log中查看提交编号)如果有版本1，版本2（后提交），当回滚到版本1时版本2会被自动删除。 git 分支相关命令 查看分支 1git branch 创建分支 1git branch xxx(分支名) 切换分支 1git checkout xxx(分支名) 创建并切换分支 1git checkout -b xxx(分支名) 删除分支 1git branch -d xxx(分支名) 强制删除分支 1git branch -D xxx(分支名) 合并分支 1git merge xxx(需要当前主分支上，合并的分支名) git 相关命令 从远程仓库获取代码（拉取所有版本到本地） 1git clone origin 从远程仓库拉取代码（拉取最新版本到本地，开发过程中使用） 1git pull origin master 向远程仓库推送代码 123git push origin master(本地分支名称)：master(远程分支名称)如果本地分支同远程分支名称一样，可以只写一个 删除当前别名所对应的远程仓库地址 1git remote remove origin]]></content>
@@ -21,7 +26,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Vue初识--vue指令]]></title>
+    <title><![CDATA[Vue初识--vue常用指令]]></title>
     <url>%2F2019%2F09%2F18%2FVue%E6%8C%87%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[Vue介绍Vue 是目前主流前端三大框架之一，是一套渐进式框架。他的作者是一位华人-尤雨溪，有中文官方文档Vue中文官方文档 在这里我们选择用CDN的方式来引入 1&lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt; Vue实例每一个Vue都是通过new Vue开始的 123456789101112let vm =new Vue(&#123; el:"", data:&#123; &#125;, methods:&#123; &#125;, computed:&#123; &#125;&#125;) 在HTML中我们可以使用 这种来插值. v-ifv-if 绑定的值在data中定义,根据定义值的真假来插入或者移除元素 1234567891011&lt;div id="app"&gt; &lt;p v-if="scok"&gt;你能看到我吗？&lt;/p&gt;&lt;/div&gt; let vm =new Vue(&#123; el:"#app", data: &#123; scok:true &#125;&#125;) 当 scok的值为 false null undefined 0 时，都不显示,为移除元素。 v-showv-show 和v-if相识 都是通过判断boolean 来显示或者不显示元素,当定义的值为 false null undefined 0是 ,不显示 12345678910&lt;div id="app"&gt;&lt;p v-show="msg"&gt;你猜你看得到我吗？&lt;/p&gt;&lt;/div&gt;let vm =new Vue(&#123; el:"#app", data:&#123; msg: null &#125;&#125;) v-show 和 v-if 的区别v-show 当不显示时 可以看到是用css 将display:none; 来就行隐藏 v-show 安全性不高，主要用于特殊类型的切换【显示与隐藏】,不适合做后台管理系统 而v-if 本质是移除Dom节点适合后台管理系统安全性比较高 v-modelv-model是数据双向绑定 123456789101112131415161718192021222324252627282930313233343536&lt;div id="app"&gt; &lt;input type="text" v-model="msg"&gt; &#123;&#123;msg&#125;&#125; &lt;hr&gt; &lt;input type="checkbox" name="checkbox" v-model="list"&gt; &#123;&#123;list&#125;&#125; &lt;hr&gt; &lt;input type="radio" value="true" name="radio" v-model="radio"&gt; &lt;label for=""&gt;true&lt;/label&gt; &lt;input type="radio" value="false" name="radio" v-model="radio"&gt; &lt;label for=""&gt;false&lt;/label&gt; &#123;&#123;radio&#125;&#125; &lt;hr&gt; &lt;input type="checkbox" value="apple" v-model="checkboxlist"&gt; &lt;input type="checkbox" value="orange" v-model="checkboxlist"&gt; &lt;input type="checkbox" value="Banana" v-model="checkboxlist"&gt; &#123;&#123;checkboxlist&#125;&#125; &lt;hr&gt; &lt;select v-model="array"&gt; &lt;option&gt;a&lt;/option&gt; &lt;option&gt;b&lt;/option&gt; &lt;option&gt;c&lt;/option&gt; &lt;option&gt;d&lt;/option&gt; &lt;/select&gt; &#123;&#123;array&#125;&#125;&lt;/div&gt; let vm =new Vue(&#123; el:"#app", data:&#123; msg:"", list:true radio:[], checkboxlist: [], array:[] &#125;&#125;) 通过v-model绑定,当用户在input框中输入数据时,会通过 显示出来 当是单选框时要注意，绑定的值要是数组[] 多个复选框时,绑定的值也要是数组[] 下拉列表时,绑定的值也要是数组[] ———————-持续更新中———————-]]></content>
       <categories>
