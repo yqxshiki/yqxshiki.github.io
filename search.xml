@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[vue-count-to 数字滚动插件]]></title>
+    <title><![CDATA[前端 vue后台管理系统 -- vue-count-to 数字滚动插件]]></title>
     <url>%2F2019%2F10%2F15%2Fvue-count%2F</url>
-    <content type="text"><![CDATA[vue-count-to 数字滚动插件在做vue-admin-webapp项目中,首页就是有数字滚动效果,它是一个无依赖项的轻量级vue组件。 我做的vue-admin-webappw文章地址点击进入 安装1npm install vue-count-to 使用12345678910111213141516171819&lt;template&gt; &lt;count :startvalue='startvalue' :endvalue='endvalue' :duration='3000'&gt;&lt;/count&gt;&lt;/template&gt;​&lt;script&gt; import count from 'vue-count-to'; export default &#123; components: &#123; count &#125;, data () &#123; return &#123; startvalue: 0, endvalue: 2017 &#125; &#125; &#125;&lt;/script&gt; startvalue:开始值endvalue:结束值duration：持续时间 还有不少属性可以调整，可以去vue-count-to学习]]></content>
+    <content type="text"><![CDATA[vue-admin-webapp项目运行地址点击进入 github地址 vue-count-to 数字滚动插件在做vue-admin-webapp项目中,首页就是有数字滚动效果,它是一个无依赖项的轻量级vue组件。 安装1npm install vue-count-to 使用12345678910111213141516171819&lt;template&gt; &lt;count :startvalue='startvalue' :endvalue='endvalue' :duration='3000'&gt;&lt;/count&gt;&lt;/template&gt;​&lt;script&gt; import count from 'vue-count-to'; export default &#123; components: &#123; count &#125;, data () &#123; return &#123; startvalue: 0, endvalue: 2017 &#125; &#125; &#125;&lt;/script&gt; startvalue:开始值endvalue:结束值duration：持续时间 还有不少属性可以调整，可以去vue-count-to学习]]></content>
       <categories>
         <category>web前端</category>
       </categories>
@@ -12,9 +12,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[将博客搬至CSDN]]></title>
+    <title><![CDATA[将博客搬至CSDN,欢迎大家来访]]></title>
     <url>%2F2019%2F10%2F15%2FCSDN%2F</url>
-    <content type="text"><![CDATA[从今日起，将blog搬至CSDN]]></content>
+    <content type="text"><![CDATA[从今日起，将博客搬至CSDN,欢迎大家来访 新博客:地址]]></content>
   </entry>
   <entry>
     <title><![CDATA[git-bash基础命令行使用]]></title>
