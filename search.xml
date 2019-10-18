@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F10%2F17%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[前端 vue后台管理系统 -- element-ui 分页]]></title>
+    <url>%2F2019%2F10%2F18%2F%E5%89%8D%E7%AB%AF%20vue%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20--%20element-ui%20%E5%88%86%E9%A1%B5%2F</url>
+    <content type="text"><![CDATA[vue-admin-webapp项目运行地址点击进入 github地址 Element-uiElement，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库 element-ui 中文官网点击进入 我自己做的vue-admin-webapp项目中的源码 1234567891011121314151617181920212223242526272829&lt;el-table :data="pagingtable.slice((currentPage - 1) * pagesize, currentPage * pagesize)" border style="width: 100%"&gt; &lt;el-table-column prop="order" label="序号"&gt;&lt;/el-table-column&gt; &lt;el-table-column prop="gid" label="ID"&gt;&lt;/el-table-column&gt; &lt;el-table-column prop="name" label="产品名称"&gt;&lt;/el-table-column&gt; &lt;el-table-column prop="price" label="价格"&gt;&lt;/el-table-column&gt; &lt;el-table-column prop="number" label="数量"&gt;&lt;/el-table-column&gt; &lt;el-table-column width="120" prop="tag" label="状态"&gt; &lt;template slot-scope="scope"&gt; &lt;el-tag :type="scope.row.tag =='已取消' ? 'danger':'success' " disable-transitions &gt;&#123;&#123;scope.row.tag&#125;&#125;&lt;/el-tag&gt; &lt;/template&gt; &lt;/el-table-column&gt;&lt;/el-table&gt;&lt;el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage" :page-sizes="[5, 10, 15, 20]" :page-size="pagesize" layout="total, sizes, prev, pager, next, jumper" :total="pagingtable.length" &gt;&lt;/el-pagination&gt; &lt;!-- total是总数据量 --&gt; 123456789101112131415161718192021222324252627282930313233343536export default &#123; data() &#123; return &#123; pagingtable: [], //把接收到的数据存储到这里 pagesize: 5, //页面一次展示多少数据 currentPage: 1 // 第几页 &#125;; &#125;, methods: &#123; // 每页展示多少条数据 handleSizeChange(size) &#123; this.pagesize = size; &#125;, // 第几页 handleCurrentChange(currentPage) &#123; this.currentPage = currentPage; &#125;, // 获取数据 getorder() &#123; this.axios .get("/api/order") .then(res =&gt; &#123; // console.log(res); this.pagingtable = res.data.data.table; // console.log(this.pagingtable.length); &#125;) .catch(err =&gt; &#123; console.log(err); &#125;); &#125; &#125;, // 页面渲染前拿到数据 mounted() &#123; this.getorder(); &#125;&#125;; 效果显示]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>element-ui</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[前端 vue后台管理系统 -- driver.js 蒙版引导]]></title>
@@ -13,8 +20,8 @@
         <category>web前端</category>
       </categories>
       <tags>
-        <tag>Vue</tag>
         <tag>Javascript</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>

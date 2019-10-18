@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yqxshiki.com/2019/09/16/hexo/</loc>
+    
+    <lastmod>2019-10-18T11:15:13.970Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yqxshiki.com/2019/10/18/%E5%89%8D%E7%AB%AF%20vue%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20--%20element-ui%20%E5%88%86%E9%A1%B5/</loc>
+    
+    <lastmod>2019-10-18T11:14:56.745Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yqxshiki.com/2019/10/16/%E5%89%8D%E7%AB%AF%20vue%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20--%20driver/</loc>
+    
+    <lastmod>2019-10-18T11:00:31.852Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yqxshiki.com/2019/10/15/CSDN/</loc>
     
     <lastmod>2019-10-17T11:46:40.178Z</lastmod>
@@ -44,30 +65,9 @@
   </url>
   
   <url>
-    <loc>http://yqxshiki.com/2019/10/16/%E5%89%8D%E7%AB%AF%20vue%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20--%20driver/</loc>
-    
-    <lastmod>2019-10-17T06:24:32.103Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yqxshiki.com/2019/09/24/pixel/</loc>
     
     <lastmod>2019-10-17T06:24:32.100Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yqxshiki.com/2019/09/16/hexo/</loc>
-    
-    <lastmod>2019-10-17T06:24:32.097Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yqxshiki.com/2019/10/17/hello-world/</loc>
-    
-    <lastmod>2019-10-17T06:24:32.095Z</lastmod>
     
   </url>
   
