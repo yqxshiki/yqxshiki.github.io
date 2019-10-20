@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[后台管理系统 --vue-admin-webapp]]></title>
+    <url>%2F2019%2F10%2F20%2F%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20--vue-admin-webapp%2F</url>
+    <content type="text"><![CDATA[这个本人第一次做比较大的项目,结合许多知识来完成项目,代码可能不怎么好看,优化也不行,请见谅。在之后我会继续提交的我的实力。因为我还是初学前端不到一年，如果下面的有所错误请提出来我会修改。 vue-admin-webapp看了掘金一篇文章后，仿照别人的demo自己做的一个vue后台管理系统 掘金原文章地址 本人Blog：点击进入 本项目涉及的技术栈有vuevue-cli vue-Router axios Echarts element-ui fastmock webpack 本项目github地址vue-admin-webapp 项目运行地址vue-admin-webapp 项目简介vue-admin-webapp 是一个后台管理系统,基于vuecli 和element-ui,使用fastmock来模拟数据,其中有图表,表格,权限,excel等等，你可以根据你的需求来添加路由。 安装123456789101112# 克隆项目git clone git@github.com:yqxshiki/vue-admin-webapp.git# 进入项目目录cd vue-admin-webapp# 安装依赖npm install# 启动服务npm run serve 启动后，将自动打开游览器 http://localhost:8080,你就可以看到项目效果了。 项目页面结构 出去登录页,页面主要来三个部分组成：头部 侧边栏 展示页,可以点击侧边栏来就行路由跳转 登录权限验证从fastmock中接收token,登录时存储在localStorage,设置全局前置守卫,在进入其他页面时，有token时才能进入，不然就跳到login页面 全局前置守卫12345678router.beforeEach((to, from, next) =&gt; &#123; const isLogin = localStorage.loginToken ? true : false; if (to.path == "/login") &#123; next(); &#125; else &#123; isLogin ? next() : next('/login') &#125;&#125;) 请求拦截12345678910axios.interceptors.request.use(config =&gt; &#123; // 判断是否有token if (localStorage.loginToken) &#123; config.headers.Authorization = localStorage.loginToken; &#125; return config;&#125;, err =&gt; &#123; // 请求错误 return Promise.reject(err);&#125;) 响应拦截12345678910111213141516axios.interceptors.response.use(res =&gt; &#123; return res;&#125;, err =&gt; &#123; const &#123; status &#125; = err.response; if (status == 401) &#123; // 后台定义401为过期 alert("token过期,请重新登录!") // 清楚token localStorage.removeItem("loginToken"); router.push("/login"); &#125; else &#123; alert(err.response.data) &#125; return Promise.reject(err); &#125;); Echart多图表会熟练运用Echart,直线图，饼图，柱状图，动态数据图等等,例如下图 Excel excel在实际项目中主要是后端做的，当然前端也可以做,只是我觉得现在没有必要所以没做。想了解的可以去搜索一下就有。 fastmock数据这里引用官方的介绍 fastmock可以让你在没有后端程序的情况下能真实地在线模拟ajax请求，你可以用fatmock实现项目初期纯前端的效果演示，也可以用fastmock实现开发中的数据模拟从而实现前后端分离。在使用fastmock之前，你的团队实现数据模拟可能是下面的方案中的一种或者多种 本地手写数据模拟，在前端代码中产生一大堆的mock代码。 利用mockjs或者canjs的can-fixture实现ajax拦截，本地配置必要的json规则。 后端在Controller层造假数据返回给前端。 我的fastmock 项目端口]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>Javascript</tag>
+        <tag>element-ui</tag>
+        <tag>echart</tag>
+        <tag>fastmock</tag>
+        <tag>axios</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端 vue后台管理系统 -- element-ui 分页]]></title>
     <url>%2F2019%2F10%2F18%2F%E5%89%8D%E7%AB%AF%20vue%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20--%20element-ui%20%E5%88%86%E9%A1%B5%2F</url>
     <content type="text"><![CDATA[vue-admin-webapp项目运行地址点击进入 github地址 Element-uiElement，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库 element-ui 中文官网点击进入 我自己做的vue-admin-webapp项目中的源码 1234567891011121314151617181920212223242526272829&lt;el-table :data="pagingtable.slice((currentPage - 1) * pagesize, currentPage * pagesize)" border style="width: 100%"&gt; &lt;el-table-column prop="order" label="序号"&gt;&lt;/el-table-column&gt; &lt;el-table-column prop="gid" label="ID"&gt;&lt;/el-table-column&gt; &lt;el-table-column prop="name" label="产品名称"&gt;&lt;/el-table-column&gt; &lt;el-table-column prop="price" label="价格"&gt;&lt;/el-table-column&gt; &lt;el-table-column prop="number" label="数量"&gt;&lt;/el-table-column&gt; &lt;el-table-column width="120" prop="tag" label="状态"&gt; &lt;template slot-scope="scope"&gt; &lt;el-tag :type="scope.row.tag =='已取消' ? 'danger':'success' " disable-transitions &gt;&#123;&#123;scope.row.tag&#125;&#125;&lt;/el-tag&gt; &lt;/template&gt; &lt;/el-table-column&gt;&lt;/el-table&gt;&lt;el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage" :page-sizes="[5, 10, 15, 20]" :page-size="pagesize" layout="total, sizes, prev, pager, next, jumper" :total="pagingtable.length" &gt;&lt;/el-pagination&gt; &lt;!-- total是总数据量 --&gt; 123456789101112131415161718192021222324252627282930313233343536export default &#123; data() &#123; return &#123; pagingtable: [], //把接收到的数据存储到这里 pagesize: 5, //页面一次展示多少数据 currentPage: 1 // 第几页 &#125;; &#125;, methods: &#123; // 每页展示多少条数据 handleSizeChange(size) &#123; this.pagesize = size; &#125;, // 第几页 handleCurrentChange(currentPage) &#123; this.currentPage = currentPage; &#125;, // 获取数据 getorder() &#123; this.axios .get("/api/order") .then(res =&gt; &#123; // console.log(res); this.pagingtable = res.data.data.table; // console.log(this.pagingtable.length); &#125;) .catch(err =&gt; &#123; console.log(err); &#125;); &#125; &#125;, // 页面渲染前拿到数据 mounted() &#123; this.getorder(); &#125;&#125;; 效果显示]]></content>
@@ -20,8 +36,8 @@
         <category>web前端</category>
       </categories>
       <tags>
-        <tag>Javascript</tag>
         <tag>Vue</tag>
+        <tag>Javascript</tag>
       </tags>
   </entry>
   <entry>
