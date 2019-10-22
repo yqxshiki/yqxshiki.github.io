@@ -9,8 +9,8 @@
       </categories>
       <tags>
         <tag>Vue</tag>
-        <tag>element-ui</tag>
         <tag>Javascript</tag>
+        <tag>element-ui</tag>
         <tag>echart</tag>
         <tag>fastmock</tag>
         <tag>axios</tag>
@@ -52,9 +52,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[将博客搬至CSDN]]></title>
+    <title><![CDATA[【博客搬家】博客搬家至CSDN！]]></title>
     <url>%2FCSDN.html</url>
-    <content type="text"><![CDATA[从今日起，将博客搬至CSDN,欢迎大家来访! 新博客:https://blog.csdn.net/weixin_44233842]]></content>
+    <content type="text"><![CDATA[【博客搬家】博客搬家至CSDN， 地址：https://blog.csdn.net/weixin_44233842]]></content>
   </entry>
   <entry>
     <title><![CDATA[git-bash基础命令行使用]]></title>
