@@ -19,6 +19,7 @@ Vue 是目前主流前端三大框架之一，是一套渐进式框架。他的�
 ```
 
 #### Vue实例
+
 每一个Vue都是通过new Vue开始的
 
 ```javascript
@@ -39,6 +40,7 @@ let vm =new Vue({
 在HTML中我们可以使用 {{表达式}} 这种来插值.
 
 ##### v-if
+
 v-if 绑定的值在data中定义,根据定义值的真假来插入或者移除元素
 
 ```javascript
