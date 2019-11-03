@@ -438,7 +438,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/pixel.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="pixel.html" itemprop="commentCount"></span>
+                  <span class="post-comments-count gitment-comments-count" data-xid="/pixel.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -622,12 +622,9 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+      
+        <div id="gitment-container"></div>
+      
     </div>
 
   
@@ -723,13 +720,13 @@
             <div class="links-of-author motion-element">
                 
                   <span class="links-of-author-item">
-                    <a href="https://github.com/yqxshiki?tab=repositories" target="_blank" title="GitHub">
+                    <a href="https://github.com/yqxshiki?tab=repositories" rel="external nofollow" target="_blank" title="GitHub">
                       
                         <i class="fa fa-fw fa-github"></i>GitHub</a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="mailto:1023942883@qq.com" target="_blank" title="E-Mail">
+                    <a href="mailto:1023942883@qq.com" rel="external nofollow" target="_blank" title="E-Mail">
                       
                         <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
@@ -1019,26 +1016,6 @@ show_date_time();
 
   
 
-    
-      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://yqxshiki.com/pixel.html';
-          this.page.identifier = 'pixel.html';
-          this.page.title = '了解px rpx em rem vw wh';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -1080,7 +1057,7 @@ show_date_time();
         notify: false,
         appId: 'uMHGQRovbu3h4S13fH9rsKaV-gzGzoHsz',
         appKey: '3d73G28YJV9apRJVaNYPmQFx',
-        placeholder: 'Just go go',
+        placeholder: '说点什么吧',
         avatar:'mm',
         guest_info:guest,
         pageSize:'10' || 10,
