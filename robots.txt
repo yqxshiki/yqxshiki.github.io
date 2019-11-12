@@ -9,6 +9,5 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
-
 Sitemap: https://www.yqxshiki.com/sitemap.xml
 Sitemap: https://www.yqxshiki.com/baidusitemap.xml
