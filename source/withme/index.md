@@ -28,3 +28,6 @@ date: 2019-09-16 20:29:30
 
 Vue 后台管理系统：
 [vue-admin-webapp](https://yqxshiki.gitee.io/login)
+
+Vue 仿网易云:
+[Vue-music](http://49.232.96.54:3030)
