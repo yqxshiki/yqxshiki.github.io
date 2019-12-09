@@ -129,7 +129,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="MongoDB,mongoose,node,">
 
 
 
@@ -142,17 +142,18 @@
 
 
 
-<meta name="description" content=".main-inner{         width: 100%;     }     .main {     padding-bottom: 150px;     margin-top: 0px;     background: rgb(238,238,238);     }     .main-inner{         margin-top: unset;     }     .">
-<meta property="og:type" content="website">
-<meta property="og:title" content="照片分享">
-<meta property="og:url" content="https://yqxshiki.com/photos/index.html">
+<meta name="description" content="MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。  mongoDB官网点击进入  Mongoose是在node.js异步环境下对mongodb进行便捷操作的对象模型工具  mongoose文档点击进入 mo">
+<meta name="keywords" content="MongoDB,mongoose,node">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB的常用使用方式">
+<meta property="og:url" content="https://yqxshiki.com/MongoDB.html">
 <meta property="og:site_name" content="Scrook.Blog">
-<meta property="og:description" content=".main-inner{         width: 100%;     }     .main {     padding-bottom: 150px;     margin-top: 0px;     background: rgb(238,238,238);     }     .main-inner{         margin-top: unset;     }     .">
+<meta property="og:description" content="MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。  mongoDB官网点击进入  Mongoose是在node.js异步环境下对mongodb进行便捷操作的对象模型工具  mongoose文档点击进入 mo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-30T10:06:52.613Z">
+<meta property="og:updated_time" content="2019-12-09T10:50:08.664Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="照片分享">
-<meta name="twitter:description" content=".main-inner{         width: 100%;     }     .main {     padding-bottom: 150px;     margin-top: 0px;     background: rgb(238,238,238);     }     .main-inner{         margin-top: unset;     }     .">
+<meta name="twitter:title" content="MongoDB的常用使用方式">
+<meta name="twitter:description" content="MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。  mongoDB官网点击进入  Mongoose是在node.js异步环境下对mongodb进行便捷操作的对象模型工具  mongoose文档点击进入 mo">
 
 
 
@@ -182,13 +183,13 @@
 
 
 
-  <link rel="canonical" href="https://yqxshiki.com/photos/">
+  <link rel="canonical" href="https://yqxshiki.com/MongoDB.html">
 
 
 
 
 
-  <title>照片分享 | Scrook.Blog</title>
+  <title>MongoDB的常用使用方式 | Scrook.Blog</title>
   
 
 
@@ -357,343 +358,279 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yqxshiki.com/MongoDB.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Scrook">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/photos.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Scrook.Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">照片分享</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <style type="text/css">
-    .main-inner{
-        width: 100%;
-    }
-    .main {
-    padding-bottom: 150px;
-    margin-top: 0px;
-    background: rgb(238,238,238);
-    }
-    .main-inner{
-        margin-top: unset;
-    }
-    .page-post-detail .post-meta{
-        display: none;
-    }
-    body {
-        background-image: unset;
-        background-attachment: unset;
-        background-size: 100%;
-        color:#000;
-        /*background-position: top left;*/
-    }
-    .header{
-        background: rgba(28, 25, 25, 0.6);
-        border-bottom: unset;
-    }
-    .menu .menu-item a{
-            font-weight: 300;
-            color: #000;
-    }
-
-    .imgbox{
-     width: 100%;
-     overflow: hidden;
-     height: 200px;
-     border-right: 1px solid #bcbcbc;
-    }
-    .box{
-        /* visibility: visible;
-        overflow: auto; 
-        zoom: 1; */
-    }
-    .box li{
-    float: left;
-    padding-left:20px;
-    padding-top:20px;
-    width: 30%;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    list-style: none;
-    margin: 0;
-    /*display: inline;*/
-    padding-right:20px;
-    height: 320px;
-    }
-    .box li span{
-    display: block;
-    padding: 4% 7% 10% 7%;
-    min-height: 60px;
-    background: #fff;
-    color: #fff;
-    font-size: 18px;
-    background: #121212;
-    font-weight: 600;
-    line-height: 26px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    }
-
-    img.imgitem{
-        padding: unset;
-        padding: unset;
-        border: unset;
-        position: relative;
-        padding: 0px;
-        height: auto;
-        width:100%;
-        height:100%;
-        box-shadow:0 5px 5px skyblue;
-    }
-
-
-div#posts.posts-expand {
-    border: unset;
-    padding: unset;
-    /* box-shadow: 0 0 15px #000; */
-    margin-bottom: 10px;
-}
-.posts-expand .post-body img{
-    width:100%;
-    padding: 0px !important;
-    box-shadow: 0 0 15px #000;
-}
-.box p{
-    display: block;
-    background: #121212;
-    color: #fff;
-    font-size: 12px;
-    font-family: 'SwisMedium';
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.box span strong{
-    /* background: rgb(0,99,229); */
-    padding: 10px;
-}
-
-.posts-expand .post-title {
-    display: block;
-}
-.btn-more-posts{
-    display: inline-block;
-    vertical-align: middle;
-    font: 55px/80px 'ChaletComprimeMilanSixty';
-    color: #000;
-    text-align: center;
-    width:100%;
-    border: unset;
-    height: auto;
-    background-color: #121212;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-/* @media (max-width: 767px){
-    .box li {
-    width: 100%;
-} */
-.title {
-    height: 30px;
-    outline:none;
-}
-
-.box span {
-    min-height: 80px;
-    border-right: unset;
-    font-size: 16px;
-}
-.box p{
-    border-right: unset;
-    font-size: 12px;
-
-}
-.posts-expand {
-    margin: unset;
-}
-    div#comments.comments.v {
-    width: 96%;
-    padding-top: 50px;
-}
-
-
-}
-/* 
-@media (min-width: 1600px){
-    .container .main-inner{
-        width: 100%;
-        height:auto;
-    }
-} */
-
-.footer{
-    background-color: #121212 !important;
-}
-.v * {
-    color: #f4f4f4 !important;
-}
-
-.v .vwrap .vmark .valert .vcode {
-    background: #00050b !important;
-}
-.post-block{
-    background:rgb(238,238,238);
-    box-shadow:none;
-}
-.title{
-    background:#000;
-    box-shadow: 0 0 15px #000;
-}
-#conBox0 li{
-box-shadow:0 3px 24px 4px #000;
-    z-index:100;
-    margin-left:20px;
-    margin-top:10px;
-}
-
-</style>
-
-<div id="box" class="box"></div>
-
-
-<script type="text/javascript">
-
-function loadXMLDoc(xmlUrl) 
-{
-    try //Internet Explorer
-    {
-        xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
-    }
-    catch(e)
-    {
-      try //Firefox, Mozilla, Opera, etc.
-        {
-          xmlDoc=document.implementation.createDocument("","",null);
-        }
-      catch(e) {alert(e.message)}
-    }
-
-    try 
-    {
-          xmlDoc.async=false;
-          xmlDoc.load(xmlUrl);
-    }
-    catch(e) {
-        try //Google Chrome  
-          {  
-            var chromeXml = new XMLHttpRequest();
-            chromeXml.open("GET", xmlUrl, false);
-            chromeXml.send(null);
-            xmlDoc = chromeXml.responseXML.documentElement;                 
-            //alert(xmlDoc.childNodes[0].nodeName);
-            //return xmlDoc;    
-          }  
-          catch(e)  
-          {  
-              alert(e.message)  
-          }                
-    }
-    return xmlDoc; 
-}
-
-var xmllink="https://hexophoto-1259178461.cos.ap-beijing.myqcloud.com"
-//访问域名链接就是我上面提到的那个访问域名xml链接
-
-xmlDoc=loadXMLDoc(xmllink);
-var urls=xmlDoc.getElementsByTagName('Key');
-var date=xmlDoc.getElementsByTagName('LastModified');
-var wid=250;
-var showNum=12; //每个相册一次展示多少照片
-if ((window.innerWidth)>1200) {wid=(window.innerWidth*3)/18;}
-var box=document.getElementById('box');
-var i=0;
-
-var content=new Array();
-var tmp=0;
-var kkk=-1;
-for (var t = 0; t < urls.length ; t++) {
-    var bucket=urls[t].innerHTML;
-    var length=bucket.indexOf('/');
-    if(length===bucket.length-1){
-        kkk++;
-        content[kkk]=new Array();
-        content[kkk][0]={'url':bucket,'date':date[t].innerHTML.substring(0,10)};
-        tmp=1;
-    }
-    else {
-        content[kkk][tmp++]={'url':bucket.substring(length+1),'date':date[t].innerHTML.substring(0,10)};
-    }
-}
-
-for (var i = 0; i < content.length; i++) {
-    var conBox=document.createElement("div");
-    conBox.id='conBox'+i;
-    box.appendChild(conBox);
-    var item=document.createElement("div");
-    var title=content[i][0].url;
-    item.innerHTML="<button class=title><span style=display:inline;><strong style=color:#fff; >"+title.substring(0,title.length-1)+"</strong></span></button>";
-    conBox.appendChild(item);
-
-    for (var j = 1; j < content[i].length && j < showNum+1; j++) {
-        var con=content[i][j].url;
-        var item=document.createElement("li");
-        item.innerHTML="<div class=imgbox id=imgbox><img class=imgitem src="+xmllink+'/'+title+con+" alt="+con+"></div><span>"+con.substring(0,con.length-4)+"</span><p>上传于"+content[i][j].date+"</p>";
-        conBox.appendChild(item);
-    }
-    if(content[i].length > showNum){
-        var moreItem=document.createElement("button");
-        moreItem.className="btn-more-posts";
-        moreItem.id="more"+i;
-        moreItem.value=showNum+1;
-        let cur=i;
-        moreItem.onclick= function (){
-            moreClick(this,cur,content[cur],content[cur][0].url);
-        }
-        moreItem.innerHTML="<span style=display:inline;><span style=color:#f40;>加载更多</span></span>"; 
-        conBox.appendChild(moreItem);
-    }
-}
-
-function moreClick(obj,cur,cont,title){
-    var parent=obj.parentNode;
-    parent.removeChild(obj);
-    var j=obj.value;
-    var begin=j;
-    for ( ; j < cont.length && j < Number(showNum) + Number(begin); j++) {
-        console.log( Number(showNum) + Number(begin));
-        var con=cont[j].url;
-        var item=document.createElement("li");
-        item.innerHTML="<div class=imgbox id=imgbox style=height:"+wid+"px;><img class=imgitem src="+xmllink+'/'+title+con+" alt="+con+"></div><span>"+con.substring(0,con.length-4)+"</span><p>上传于"+cont[j].date+"</p>";
-        parent.appendChild(item);
-    }
-    if(cont.length > j){
-        obj.value=j;
-        parent.appendChild(obj);
-    }
-}
-
-</script>
+          <h1 class="post-title" itemprop="name headline">MongoDB的常用使用方式</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-20T11:49:58+08:00">
+                2019-11-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/MongoDB.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/MongoDB.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  452
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <blockquote>
+<p>MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。</p>
+<p>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</p>
+</blockquote>
+<p><strong>mongoDB官网<a href="https://www.mongodb.com/" target="_blank" rel="noopener">点击进入</a></strong></p>
+<blockquote>
+<p>Mongoose是在node.js异步环境下对mongodb进行便捷操作的对象模型工具</p>
+</blockquote>
+<p><strong>mongoose文档<a href="http://www.mongoosejs.net/" target="_blank" rel="noopener">点击进入</a></strong></p>
+<h3 id="mongoose安装"><a href="#mongoose安装" class="headerlink" title="mongoose安装"></a>mongoose安装</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i mongoose --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="mongoose使用"><a href="#mongoose使用" class="headerlink" title="mongoose使用"></a>mongoose使用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入mongoose</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//连接数据库，就算没有这个数据库也会创建这个数据库</span></span><br><span class="line">mongoose.connect(<span class="string">"mongodb://localhost:27017/mongoose_test"</span>, &#123;</span><br><span class="line">    useNewUrlParser: <span class="literal">true</span>,</span><br><span class="line">    useUnifiedTopology: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 监听数据库</span></span><br><span class="line">mongoose.connection.once(<span class="string">'open'</span>, (err) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (!err) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"连接成功····"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义Schema，每个 schema 都会映射到一个 MongoDB collection ，并定义这个collection里的文档的构成。</span></span><br><span class="line"><span class="keyword">const</span> Schema = mongoose.Schema;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> ArticleSchema = <span class="keyword">new</span> Schema(&#123;</span><br><span class="line">    title: &#123;</span><br><span class="line">        type: <span class="built_in">String</span></span><br><span class="line">    &#125;,</span><br><span class="line">    body: &#123;</span><br><span class="line">        type: <span class="built_in">String</span></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 定义一个模型</span></span><br><span class="line"><span class="keyword">let</span> Article = mongoose.model(<span class="string">'Articles'</span>, ArticleSchema)</span><br></pre></td></tr></table></figure>
+
+<h4 id="增"><a href="#增" class="headerlink" title="增"></a>增</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">"/add"</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> arr = <span class="keyword">await</span> Article.create([&#123;</span><br><span class="line">            title: <span class="string">"第一篇文章"</span>,</span><br><span class="line">            body: <span class="string">"第一篇内容"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            title: <span class="string">"第二篇文章"</span>,</span><br><span class="line">            body: <span class="string">"第二篇内容"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            title: <span class="string">"第三篇文章"</span>,</span><br><span class="line">            body: <span class="string">"第三篇内容"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ])</span><br><span class="line">    res.send(arr);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="查"><a href="#查" class="headerlink" title="查"></a>查</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">"/find"</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 查询所有</span></span><br><span class="line">    <span class="keyword">let</span> arr = <span class="keyword">await</span> Article.find();</span><br><span class="line">    <span class="comment">// 查询满足要求的第一个</span></span><br><span class="line">    <span class="comment">// let arr = await Article.findone(&#123;</span></span><br><span class="line">    <span class="comment">//     title: "第一篇文章"</span></span><br><span class="line">    <span class="comment">// &#125;)</span></span><br><span class="line">    res.send(arr);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="改"><a href="#改" class="headerlink" title="改"></a>改</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">app.post(<span class="string">"/put"</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="comment">// updateOne    改一个</span></span><br><span class="line">    <span class="comment">// updateMany   改多个,使用数组  </span></span><br><span class="line">    <span class="keyword">let</span> arr = <span class="keyword">await</span> Article.updateOne(&#123;</span><br><span class="line">        title: <span class="string">"第三篇文章"</span></span><br><span class="line">    &#125;, req.body)</span><br><span class="line">    res.send(arr);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="删"><a href="#删" class="headerlink" title="删"></a>删</h4><pre><code class="javascript">app.delete(<span class="string">"/delete"</span>, <span class="keyword">async</span> (req, res) =&gt; {
+    <span class="comment">// remove       结合体，都可以</span>
+    <span class="comment">// deleteOne    删一个</span>
+    <span class="comment">// deleteMany   删多个,使用数组</span>
+    <span class="keyword">let</span> arr = <span class="keyword">await</span> Article.remove({
+        title: <span class="string">"第二篇文章"</span>
+    })
+    res.send(arr);
+})
+<span class="string">``</span>
+**持续更新中**</code></pre>
+
       
     </div>
     
     
     
+  <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
+    
+  <div>
+      
+          
+
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>MongoDB的常用使用方式</p>
+  <p><span>文章作者:</span>Scrook</p>
+  <p><span>发布时间:</span>2019年11月20日 - 11:49:58</p>
+  <p><span>最后更新:</span>2019年12月09日 - 18:50:08</p>
+  <p><span>原始链接:</span><a href="/MongoDB.html" title="MongoDB的常用使用方式">https://yqxshiki.com/MongoDB.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://yqxshiki.com/MongoDB.html" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+      
+  </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MongoDB/" rel="tag"><i class="fa fa-tag"></i> MongoDB</a>
+          
+            <a href="/tags/mongoose/" rel="tag"><i class="fa fa-tag"></i> mongoose</a>
+          
+            <a href="/tags/node/" rel="tag"><i class="fa fa-tag"></i> node</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Vuemusic.html" rel="next" title="vue-music 仿网易云移动端">
+                <i class="fa fa-chevron-left"></i> vue-music 仿网易云移动端
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -733,8 +670,17 @@ function moreClick(obj,cur,cont,title){
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -854,6 +800,22 @@ show_date_time();
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#mongoose安装"><span class="nav-number">1.</span> <span class="nav-text">mongoose安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mongoose使用"><span class="nav-number">2.</span> <span class="nav-text">mongoose使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#增"><span class="nav-number">2.1.</span> <span class="nav-text">增</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查"><span class="nav-number">2.2.</span> <span class="nav-text">查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改"><span class="nav-number">2.3.</span> <span class="nav-text">改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删"><span class="nav-number">2.4.</span> <span class="nav-text">删</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
