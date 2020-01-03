@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yqxshiki.com/Nodejs%E7%9A%84%E9%80%9A%E7%94%A8%E6%8E%A5%E5%8F%A3.html</loc>
+    <lastmod>2020-01-03</lastmod>
+  </url>  <url>
+    <loc>https://yqxshiki.com/pixel.html</loc>
+    <lastmod>2019-12-25</lastmod>
+  </url>  <url>
     <loc>https://yqxshiki.com/MongoDB.html</loc>
     <lastmod>2019-12-09</lastmod>
   </url>  <url>
@@ -14,9 +20,6 @@
     <lastmod>2019-10-30</lastmod>
   </url>  <url>
     <loc>https://yqxshiki.com/Vue%E6%8C%87%E4%BB%A4.html</loc>
-    <lastmod>2019-10-30</lastmod>
-  </url>  <url>
-    <loc>https://yqxshiki.com/pixel.html</loc>
     <lastmod>2019-10-30</lastmod>
   </url>  <url>
     <loc>https://yqxshiki.com/%E5%8E%9F%E7%94%9FJS%E6%8B%96%E6%8B%BD%E4%BA%8B%E4%BB%B6.html</loc>

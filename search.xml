@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Nodejs的通用接口]]></title>
+    <url>%2FNodejs%E7%9A%84%E9%80%9A%E7%94%A8%E6%8E%A5%E5%8F%A3.html</url>
+    <content type="text"><![CDATA[在正常开发中，我们经常实现一个数据的增删改查，这样在后端我们需要根据一个数据创建四个接口，如果数据过多，就会有好多的冗余代码. 使用express创建服务器12345678910111213141516const express = require('express')const app = express()// 解析jsonapp.use(express.json())//解决跨域app.use(require('cors')())// 数据库require('./plugins/db')(app)// 路由require('./routes/admin/index')(app)app.listen(4000, () =&gt; console.log('app listening on port 4000!')) 连接Mongodb数据库123456789module.exports = app =&gt; &#123; const mongoose = require("mongoose") mongoose.connect('mongodb://localhost:27017/blog', &#123; useCreateIndex: true, useFindAndModify: true, useNewUrlParser: true, useUnifiedTopology: true &#125;)&#125; routes 接口展示123456789101112131415161718192021222324252627282930313233343536373839module.exports = app =&gt; &#123; const express = require("express") const router = express.Router(&#123; mergeParams: true &#125;) // 增 router.post('/add', async (req, res) =&gt; &#123; const data = await req.Model.create(req.body); res.send(data) &#125;) //删 router.delete('/delete/:id', async (req, res) =&gt; &#123; const data = await req.Model.findByIdAndDelete(req.params.id); res.send(&#123; status: true &#125;) &#125;) // 改 router.post("/resive/:id", async (req, res) =&gt; &#123; const data = await req.Model.findByIdAndUpdate(req.params.id, req.body); res.send(data) &#125;) // 查 router.get("/check", async (req, res) =&gt; &#123; const data = await req.Model.find(); res.send(data); &#125;) app.use("/api/rest/:resource",async(req,res,next)=&gt;&#123; //将接口名变为模型的文件名 例如:/api/rest/categoies 模型名就必须是Category const modelname=require('inflection').classify(req.params.resource) //models 里面是模型 req.Model=require(`../models/$&#123;modelname&#125;`) await next(); &#125;,router) &#125;]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+        <tag>Express</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MongoDB的常用使用方式]]></title>
     <url>%2FMongoDB.html</url>
     <content type="text"><![CDATA[MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。 mongoDB官网点击进入 Mongoose是在node.js异步环境下对mongodb进行便捷操作的对象模型工具 mongoose文档点击进入 mongoose安装1npm i mongoose --save mongoose使用1234567891011121314151617181920212223242526272829//引入mongooseconst mongoose = require('mongoose');//连接数据库，就算没有这个数据库也会创建这个数据库mongoose.connect("mongodb://localhost:27017/mongoose_test", &#123; useNewUrlParser: true, useUnifiedTopology: true&#125;)// 监听数据库mongoose.connection.once('open', (err) =&gt; &#123; if (!err) &#123; console.log("连接成功····") &#125;&#125;)//定义Schema，每个 schema 都会映射到一个 MongoDB collection ，并定义这个collection里的文档的构成。const Schema = mongoose.Schema;let ArticleSchema = new Schema(&#123; title: &#123; type: String &#125;, body: &#123; type: String &#125;,&#125;)// 定义一个模型let Article = mongoose.model('Articles', ArticleSchema) 增12345678910111213141516app.get("/add", async (req, res) =&gt; &#123; let arr = await Article.create([&#123; title: "第一篇文章", body: "第一篇内容" &#125;, &#123; title: "第二篇文章", body: "第二篇内容" &#125;, &#123; title: "第三篇文章", body: "第三篇内容" &#125; ]) res.send(arr);&#125;) 查123456789app.get("/find", async (req, res) =&gt; &#123; // 查询所有 let arr = await Article.find(); // 查询满足要求的第一个 // let arr = await Article.findone(&#123; // title: "第一篇文章" // &#125;) res.send(arr);&#125;) 改12345678app.post("/put", async (req, res) =&gt; &#123; // updateOne 改一个 // updateMany 改多个,使用数组 let arr = await Article.updateOne(&#123; title: "第三篇文章" &#125;, req.body) res.send(arr);&#125;) 删app.delete("/delete", async (req, res) =&gt; { // remove 结合体，都可以 // deleteOne 删一个 // deleteMany 删多个,使用数组 let arr = await Article.remove({ title: "第二篇文章" }) res.send(arr); }) `` **持续更新中**]]></content>
@@ -60,10 +72,10 @@
       </categories>
       <tags>
         <tag>Vue</tag>
-        <tag>element-ui</tag>
         <tag>Javascript</tag>
         <tag>echart</tag>
         <tag>fastmock</tag>
+        <tag>element-ui</tag>
         <tag>axios</tag>
       </tags>
   </entry>
