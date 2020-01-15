@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vuelazyload实现图片懒加载]]></title>
+    <url>%2Fyqxshiki.github.io%2Fvuelazyload.html</url>
+    <content type="text"><![CDATA[在web前端中，性能优化是一个大问题，而图片懒加载就是其中一个比较重要的环节，现在在项目中，我们可以使用vue-ladyload来实现. CDN方式使用123456&lt;script src=&quot;https://unpkg.com/vue-lazyload/vue-lazyload.js&quot;&gt;&lt;/script&gt;&lt;script&gt; Vue.use(VueLazyload) ...&lt;/script&gt; NPM使用1npm i vue-lazyload 新建文件vuelazyload.js123456789import VueLazyLoad from 'vue-lazyload'import Vue from 'vue'Vue.use(VueLazyLoad, &#123; error: require("../static/error.jpg"), //错误图片 loading: require('../static/loading.gif'), //加载图片 attempt: 2 //尝试次数&#125;) 使用模板12345// 使用前&lt;img :src="item.icon" alt /&gt;// 使用后&lt;img v-lazy="item.icon" alt /&gt; 更多的配置信息在 npm地址]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>插件</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>vue-lazyload</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Nodejs的通用接口]]></title>
     <url>%2Fyqxshiki.github.io%2FNodejs%E7%9A%84%E9%80%9A%E7%94%A8%E6%8E%A5%E5%8F%A3.html</url>
     <content type="text"><![CDATA[在正常开发中，我们经常实现一个数据的增删改查，这样在后端我们需要根据一个数据创建四个接口，如果数据过多，就会有好多的冗余代码. 使用express创建服务器12345678910111213141516const express = require('express')const app = express()// 解析jsonapp.use(express.json())//解决跨域app.use(require('cors')())// 数据库require('./plugins/db')(app)// 路由require('./routes/admin/index')(app)app.listen(4000, () =&gt; console.log('app listening on port 4000!')) 连接Mongodb数据库123456789module.exports = app =&gt; &#123; const mongoose = require("mongoose") mongoose.connect('mongodb://localhost:27017/blog', &#123; useCreateIndex: true, useFindAndModify: true, useNewUrlParser: true, useUnifiedTopology: true &#125;)&#125; routes 接口展示123456789101112131415161718192021222324252627282930313233343536373839module.exports = app =&gt; &#123; const express = require("express") const router = express.Router(&#123; mergeParams: true &#125;) // 增 router.post('/add', async (req, res) =&gt; &#123; const data = await req.Model.create(req.body); res.send(data) &#125;) //删 router.delete('/delete/:id', async (req, res) =&gt; &#123; const data = await req.Model.findByIdAndDelete(req.params.id); res.send(&#123; status: true &#125;) &#125;) // 改 router.post("/resive/:id", async (req, res) =&gt; &#123; const data = await req.Model.findByIdAndUpdate(req.params.id, req.body); res.send(data) &#125;) // 查 router.get("/check", async (req, res) =&gt; &#123; const data = await req.Model.find(); res.send(data); &#125;) app.use("/api/rest/:resource",async(req,res,next)=&gt;&#123; //将接口名变为模型的文件名 例如:/api/rest/categoies 模型名就必须是Category const modelname=require('inflection').classify(req.params.resource) //models 里面是模型 req.Model=require(`../models/$&#123;modelname&#125;`) await next(); &#125;,router) &#125;]]></content>
@@ -85,6 +98,7 @@
     <content type="text"><![CDATA[vue-admin-webapp项目运行地址点击进入 github地址 Element-uiElement，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库 element-ui 中文官网点击进入 我自己做的vue-admin-webapp项目中的源码 1234567891011121314151617181920212223242526272829&lt;el-table :data="pagingtable.slice((currentPage - 1) * pagesize, currentPage * pagesize)" border style="width: 100%"&gt; &lt;el-table-column prop="order" label="序号"&gt;&lt;/el-table-column&gt; &lt;el-table-column prop="gid" label="ID"&gt;&lt;/el-table-column&gt; &lt;el-table-column prop="name" label="产品名称"&gt;&lt;/el-table-column&gt; &lt;el-table-column prop="price" label="价格"&gt;&lt;/el-table-column&gt; &lt;el-table-column prop="number" label="数量"&gt;&lt;/el-table-column&gt; &lt;el-table-column width="120" prop="tag" label="状态"&gt; &lt;template slot-scope="scope"&gt; &lt;el-tag :type="scope.row.tag =='已取消' ? 'danger':'success' " disable-transitions &gt;&#123;&#123;scope.row.tag&#125;&#125;&lt;/el-tag&gt; &lt;/template&gt; &lt;/el-table-column&gt;&lt;/el-table&gt;&lt;el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage" :page-sizes="[5, 10, 15, 20]" :page-size="pagesize" layout="total, sizes, prev, pager, next, jumper" :total="pagingtable.length" &gt;&lt;/el-pagination&gt; &lt;!-- total是总数据量 --&gt; 123456789101112131415161718192021222324252627282930313233343536export default &#123; data() &#123; return &#123; pagingtable: [], //把接收到的数据存储到这里 pagesize: 5, //页面一次展示多少数据 currentPage: 1 // 第几页 &#125;; &#125;, methods: &#123; // 每页展示多少条数据 handleSizeChange(size) &#123; this.pagesize = size; &#125;, // 第几页 handleCurrentChange(currentPage) &#123; this.currentPage = currentPage; &#125;, // 获取数据 getorder() &#123; this.axios .get("/api/order") .then(res =&gt; &#123; // console.log(res); this.pagingtable = res.data.data.table; // console.log(this.pagingtable.length); &#125;) .catch(err =&gt; &#123; console.log(err); &#125;); &#125; &#125;, // 页面渲染前拿到数据 mounted() &#123; this.getorder(); &#125;&#125;; 效果显示]]></content>
       <categories>
         <category>web前端</category>
+        <category>插件</category>
       </categories>
       <tags>
         <tag>Vue</tag>
@@ -97,6 +111,7 @@
     <content type="text"><![CDATA[vue-admin-webapp项目运行地址点击进入 github地址 driver.js介绍driver.js 蒙版引导,也就是我们经常第一次使用时,会引导你正确使用该项目的功能 简单：易于使用，完全没有外部依赖性 轻量级：〜4kb大小，原始JavaScript，无外部依赖 高度可定制：具有强大的API，可以根据需要使用 突出显示任何内容：突出显示页面上的任何（字面上是任何）元素 功能介绍：为您的Web应用程序创建功能强大的功能介绍 安装1npm install driver.js 使用方法12345&lt;template&gt; &lt;div id="driver"&gt; &lt;div @click="guide()"&gt;引导&lt;/div&gt; &lt;/div&gt;&lt;/template&gt; 12345678910111213141516171819202122232425// 引用库import Driver from "driver.js";import "driver.js/dist/driver.min.css";// 新建一个guide.js 引人import steps from "./guide";export default &#123; mounted() &#123; this.driver = new Driver(&#123; opacity: 0.5,//透明度 animate: true,//动画 padding: 10,//边距 allowClose: true,//点击覆盖是否应该关闭 overlayClickNext: false,//单击覆盖是否应移动到下一步 doneBtnText: "完成", closeBtnText: "关闭", nextBtnText: "下一步", prevBtnText: "上一步" &#125;); &#125;, methods: &#123; guide() &#123; this.driver.defineSteps(steps); this.driver.start(); &#125; &#125; 新建的guide.js 123456789101112131415161718192021222324252627282930313233343536const steps = [ &#123; element: '#sidebar',//绑定元素,不要用class,id具有唯一性,比较好 popover: &#123; title: '折叠按钮',//标题 description: '点击收缩和展开菜单导航',//内容 position: 'bottom'//显示位置 &#125; &#125;, &#123; element: '#domshouye', popover: &#123; title: '面包屑导航', description: '用于显示当前菜单的位置', position: 'bottom-right' &#125; &#125;, &#123; element: '#domMessage', popover: &#123; title: '通知', description: '点击图标，右侧会显示通知消息', position: 'bottom-right' &#125; &#125;, &#123; element: '#domFullScreen', popover: &#123; title: '全屏显示', description: '点击图标，放大全屏显示系统', position: 'bottom-right' &#125; &#125;,]export default steps 效果显示 更加详细的内容可以去官网查看点击进入]]></content>
       <categories>
         <category>web前端</category>
+        <category>插件</category>
       </categories>
       <tags>
         <tag>Vue</tag>
@@ -109,6 +124,7 @@
     <content type="text"><![CDATA[vue-admin-webapp项目运行地址点击进入 github地址 vue-count-to 数字滚动插件在做vue-admin-webapp项目中,首页就是有数字滚动效果,它是一个无依赖项的轻量级vue组件。 安装1npm install vue-count-to 使用方法123&lt;template&gt; &lt;count :startvalue='startvalue' :endvalue='endvalue' :duration='3000'&gt;&lt;/count&gt;&lt;/template&gt; 1234567891011121314&lt;script&gt; import count from 'vue-count-to'; export default &#123; components: &#123; count &#125;, data () &#123; return &#123; startvalue: 0, endvalue: 2017 &#125; &#125; &#125;&lt;/script&gt; startvalue:开始值endvalue:结束值duration：持续时间 效果显示 还有不少属性可以调整，可以去vue-count-to学习]]></content>
       <categories>
         <category>web前端</category>
+        <category>插件</category>
       </categories>
       <tags>
         <tag>Vue</tag>
