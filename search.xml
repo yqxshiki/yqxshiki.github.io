@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[nuxtjs设置环境变量]]></title>
+    <url>%2Fyqxshiki.github.io%2Fnuxtjs%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html</url>
+    <content type="text"><![CDATA[安装cross-env1npm i cross-env -D env.js文件在项目的根目录创建 12345678910module.exports = &#123; dev: &#123; MODE: 'development', ENV_API: "xxxxxx" //开发环境 &#125;, pro: &#123; MODE: 'production', ENV_API: 'xxxxxx' //生产环境 &#125;&#125; nuxt.config.js配置123456const env = require("./env")export default &#123; env: &#123; baseUrl: env[process.env.MODE].ENV_API &#125;, package.json 配置12345678910在这里使用之前安装的cross-env这个包&#123; "scripts": &#123; "dev": "cross-env MODE=dev nuxt", "build": "cross-env MODE=pro nuxt build", "start": "cross-env MODE=pro nuxt start", "generate": "cross-env MODE=pro nuxt generate", "analyze": "nuxt build --analyze" &#125;,&#125; 使用方法现在就非常简单了，比如我们刚刚在nuxt.config.js中定义了baseUrl，可以直接process.env.baseUrl调用]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>SSR(服务器渲染)</category>
+      </categories>
+      <tags>
+        <tag>Nuxtjs</tag>
+        <tag>vue</tag>
+        <tag>webpack</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[vuelazyload实现图片懒加载]]></title>
     <url>%2Fyqxshiki.github.io%2Fvuelazyload.html</url>
     <content type="text"><![CDATA[在web前端中，性能优化是一个大问题，而图片懒加载就是其中一个比较重要的环节，现在在项目中，我们可以使用vue-ladyload来实现. CDN方式使用123456&lt;script src=&quot;https://unpkg.com/vue-lazyload/vue-lazyload.js&quot;&gt;&lt;/script&gt;&lt;script&gt; Vue.use(VueLazyload) ...&lt;/script&gt; NPM使用1npm i vue-lazyload 新建文件vuelazyload.js123456789import VueLazyLoad from 'vue-lazyload'import Vue from 'vue'Vue.use(VueLazyLoad, &#123; error: require("../static/error.jpg"), //错误图片 loading: require('../static/loading.gif'), //加载图片 attempt: 2 //尝试次数&#125;) 使用模板12345// 使用前&lt;img :src="item.icon" alt /&gt;// 使用后&lt;img v-lazy="item.icon" alt /&gt; 更多的配置信息在 npm地址]]></content>
