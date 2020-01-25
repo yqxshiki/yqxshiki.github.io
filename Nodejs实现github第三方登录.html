@@ -129,7 +129,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Nodejs,">
 
 
 
@@ -142,16 +142,23 @@
 
 
 
-<meta name="description" content="世人万千种，浮云莫去求，斯人若彩虹，遇上方知有。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Scrook.Blog">
-<meta property="og:url" content="https://yqxshiki.com/archives/2019/09/index.html">
+<meta name="description" content="第三方登录在日常开发中是经常被使用的,我在做个人博客时,因为要做评论功能,又考虑到不能和别人做到良好的沟通交流，所有研究了一下第三方登录,这里使用github为例,其他都差不多,如果你发现我的文章有什么问题或者错误,欢迎在我的博客里面评论.  实现流程 github-API文档 Github配置登录github，点击setting，点击Developer settings 点击到OAuth Ap">
+<meta name="keywords" content="Nodejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nodejs实现github第三方登录">
+<meta property="og:url" content="https://yqxshiki.com/Nodejs实现github第三方登录.html">
 <meta property="og:site_name" content="Scrook.Blog">
-<meta property="og:description" content="世人万千种，浮云莫去求，斯人若彩虹，遇上方知有。">
+<meta property="og:description" content="第三方登录在日常开发中是经常被使用的,我在做个人博客时,因为要做评论功能,又考虑到不能和别人做到良好的沟通交流，所有研究了一下第三方登录,这里使用github为例,其他都差不多,如果你发现我的文章有什么问题或者错误,欢迎在我的博客里面评论.  实现流程 github-API文档 Github配置登录github，点击setting，点击Developer settings 点击到OAuth Ap">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://blog-1259178461.cos.ap-chengdu.myqcloud.com/Third-party-login/third-party-login.png">
+<meta property="og:image" content="https://blog-1259178461.cos.ap-chengdu.myqcloud.com/Third-party-login/HRZDYB6_">
+<meta property="og:image" content="https://blog-1259178461.cos.ap-chengdu.myqcloud.com/Third-party-login/%249X%7DHORVBLZ04YJXHH%5D%40SY9.png">
+<meta property="og:image" content="https://blog-1259178461.cos.ap-chengdu.myqcloud.com/Third-party-login/HO%5D6%7BOCLLLXOZ%60%7B9XG~R8L6.png">
+<meta property="og:updated_time" content="2020-01-25T09:59:55.868Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Scrook.Blog">
-<meta name="twitter:description" content="世人万千种，浮云莫去求，斯人若彩虹，遇上方知有。">
+<meta name="twitter:title" content="Nodejs实现github第三方登录">
+<meta name="twitter:description" content="第三方登录在日常开发中是经常被使用的,我在做个人博客时,因为要做评论功能,又考虑到不能和别人做到良好的沟通交流，所有研究了一下第三方登录,这里使用github为例,其他都差不多,如果你发现我的文章有什么问题或者错误,欢迎在我的博客里面评论.  实现流程 github-API文档 Github配置登录github，点击setting，点击Developer settings 点击到OAuth Ap">
+<meta name="twitter:image" content="https://blog-1259178461.cos.ap-chengdu.myqcloud.com/Third-party-login/third-party-login.png">
 
 
 
@@ -181,13 +188,13 @@
 
 
 
-  <link rel="canonical" href="https://yqxshiki.com/archives/2019/09/">
+  <link rel="canonical" href="https://yqxshiki.com/Nodejs实现github第三方登录.html">
 
 
 
 
 
-  <title>归档 | Scrook.Blog</title>
+  <title>Nodejs实现github第三方登录 | Scrook.Blog</title>
   
 
 
@@ -206,7 +213,7 @@
     
   
 
-  <div class="container sidebar-position-right page-archive">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
         <a href="https://github.com/yqxshiki"><img style="position:absolute; top:0; left:0;border:0" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_green_007200.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
      
@@ -354,142 +361,236 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yqxshiki.com/yqxshiki.github.io/Nodejs实现github第三方登录.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Scrook">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/yqxshiki.github.io/images/photos.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Scrook.Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Nodejs实现github第三方登录</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-25T16:22:56+08:00">
+                2020-01-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 17 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/yqxshiki.github.io/Nodejs实现github第三方登录.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/yqxshiki.github.io/Nodejs实现github第三方登录.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/yqxshiki.github.io/pixel.html" itemprop="url">
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">了解px rpx em rem vw wh</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  468
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-24T12:48:29+08:00" content="2019-09-24">
-          09-24
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/yqxshiki.github.io/Vue指令.html" itemprop="url">
-              
-                <span itemprop="name">Vue初识--vue常用指令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-18T10:58:37+08:00" content="2019-09-18">
-          09-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/yqxshiki.github.io/hexo.html" itemprop="url">
-              
-                <span itemprop="name">利用git github hexo 搭建属于自己的个人博客</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-16T17:40:55+08:00" content="2019-09-16">
-          09-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
+        <blockquote>
+<p>第三方登录在日常开发中是经常被使用的,我在做个人博客时,因为要做评论功能,又考虑到不能和别人做到良好的沟通交流，所有研究了一下第三方登录,这里使用github为例,其他都差不多,如果你发现我的文章有什么问题或者错误,欢迎在我的博客里面评论.</p>
+</blockquote>
+<h2 id="实现流程"><a href="#实现流程" class="headerlink" title="实现流程"></a>实现流程</h2><p><img src="https://blog-1259178461.cos.ap-chengdu.myqcloud.com/Third-party-login/third-party-login.png" alt></p>
+<p><a href="https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow" target="_blank" rel="noopener">github-API文档</a></p>
+<h2 id="Github配置"><a href="#Github配置" class="headerlink" title="Github配置"></a>Github配置</h2><h4 id="登录github，点击setting，点击Developer-settings"><a href="#登录github，点击setting，点击Developer-settings" class="headerlink" title="登录github，点击setting，点击Developer settings"></a>登录github，点击setting，点击Developer settings</h4><p><img src="https://blog-1259178461.cos.ap-chengdu.myqcloud.com/Third-party-login/HRZDYB6_" alt></p>
+<h4 id="点击到OAuth-Apps"><a href="#点击到OAuth-Apps" class="headerlink" title="点击到OAuth Apps"></a>点击到OAuth Apps</h4><p><img src="https://blog-1259178461.cos.ap-chengdu.myqcloud.com/Third-party-login/%249X%7DHORVBLZ04YJXHH%5D%40SY9.png" alt></p>
+<h4 id="配置授权页面，注册授权信息"><a href="#配置授权页面，注册授权信息" class="headerlink" title="配置授权页面，注册授权信息"></a>配置授权页面，注册授权信息</h4><p><img src="https://blog-1259178461.cos.ap-chengdu.myqcloud.com/Third-party-login/HO%5D6%7BOCLLLXOZ%60%7B9XG~R8L6.png" alt></p>
+<h2 id="前端代码"><a href="#前端代码" class="headerlink" title="前端代码"></a>前端代码</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrap"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://localhost:3000/github/login"</span>&gt;</span>github登录<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="后端代码"><a href="#后端代码" class="headerlink" title="后端代码"></a>后端代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">"express"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> axios = <span class="built_in">require</span>(<span class="string">"axios"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> querystring = <span class="built_in">require</span>(<span class="string">"querystring"</span>)</span><br><span class="line"></span><br><span class="line">app.use(<span class="built_in">require</span>(<span class="string">"cors"</span>)())</span><br><span class="line"></span><br><span class="line">app.use(express.json())</span><br><span class="line"></span><br><span class="line"><span class="comment">// github配置参数</span></span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">    _id: <span class="string">"xxxxxxxxxxxxxxxxxxx"</span>,</span><br><span class="line">    _secret: <span class="string">"xxxxxxxxxxxxxxxxxxx"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">"/"</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    res.send(<span class="string">"ok"</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 登录</span></span><br><span class="line">app.get(<span class="string">"/github/login"</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 请求用户的GitHub身份</span></span><br><span class="line">    <span class="keyword">let</span> path = <span class="string">'https://github.com/login/oauth/authorize?client_id='</span> + config._id</span><br><span class="line">    <span class="comment">// 重定向到github登录页</span></span><br><span class="line">    res.redirect(path)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//回调</span></span><br><span class="line">app.get(<span class="string">"/callback"</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="comment">//如果用户接受您的请求，则GitHub会code使用代码参数中的临时值重定向到您的站点。临时代码将在10分钟后过期。</span></span><br><span class="line">    <span class="keyword">let</span> code = req.query.code;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 需要配置的参数</span></span><br><span class="line">    <span class="keyword">const</span> params = &#123;</span><br><span class="line">        client_id: config._id,<span class="comment">//您从GitHub收到的GitHub App的客户密码。</span></span><br><span class="line"></span><br><span class="line">        client_secret: config._secret,<span class="comment">//您从GitHub收到的GitHub App的客户密码。</span></span><br><span class="line"></span><br><span class="line">        code: code<span class="comment">//您收到的作为对步骤1的响应的代码。</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> data = <span class="keyword">await</span> axios.post(<span class="string">"https://github.com/login/oauth/access_token"</span>, params);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 例如data.data  的值access_token=e72e16c7e42f292c6912e7710c838347ae178b4a&amp;token_type=bearer</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 从github获得的access_token进行截取</span></span><br><span class="line">    <span class="keyword">const</span> access_token = querystring.parse(data.data).access_token;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//截取后 data.data  的值access_token=e72e16c7e42f292c6912e7710c838347ae178b4a</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取用户信息</span></span><br><span class="line">    data = <span class="keyword">await</span> axios.get(<span class="string">'https://api.github.com/user?access_token='</span> + access_token)</span><br><span class="line"></span><br><span class="line">    res.send(data.data)</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`http://localhost:3000`</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+      
     </div>
+    
+    
+    
+  <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
+    
+  <div>
+      
+          
+
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>Nodejs实现github第三方登录</p>
+  <p><span>文章作者:</span>Scrook</p>
+  <p><span>发布时间:</span>2020年01月25日 - 16:22:56</p>
+  <p><span>最后更新:</span>2020年01月25日 - 17:59:55</p>
+  <p><span>原始链接:</span><a href="/yqxshiki.github.io/Nodejs实现github第三方登录.html" title="Nodejs实现github第三方登录">https://yqxshiki.com/Nodejs实现github第三方登录.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://yqxshiki.com/Nodejs实现github第三方登录.html" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+      
+  </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/yqxshiki.github.io/tags/Nodejs/" rel="tag"><i class="fa fa-tag"></i> Nodejs</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/yqxshiki.github.io/nuxtjs设置环境变量.html" rel="next" title="nuxtjs设置环境变量">
+                <i class="fa fa-chevron-left"></i> nuxtjs设置环境变量
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -497,6 +598,17 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -517,8 +629,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -638,6 +759,22 @@ show_date_time();
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现流程"><span class="nav-number">1.</span> <span class="nav-text">实现流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github配置"><span class="nav-number">2.</span> <span class="nav-text">Github配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#登录github，点击setting，点击Developer-settings"><span class="nav-number">2.0.1.</span> <span class="nav-text">登录github，点击setting，点击Developer settings</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#点击到OAuth-Apps"><span class="nav-number">2.0.2.</span> <span class="nav-text">点击到OAuth Apps</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置授权页面，注册授权信息"><span class="nav-number">2.0.3.</span> <span class="nav-text">配置授权页面，注册授权信息</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#前端代码"><span class="nav-number">3.</span> <span class="nav-text">前端代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后端代码"><span class="nav-number">4.</span> <span class="nav-text">后端代码</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -828,6 +965,10 @@ show_date_time();
 
 
   
+  <script type="text/javascript" src="/yqxshiki.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/yqxshiki.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
