@@ -145,7 +145,7 @@
 <meta name="description" content="世人万千种，浮云莫去求，斯人若彩虹，遇上方知有。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Scrook.Blog">
-<meta property="og:url" content="https://yqxshiki.com/tags/Javascript/index.html">
+<meta property="og:url" content="https://yqxshiki.com/tags/javascript/index.html">
 <meta property="og:site_name" content="Scrook.Blog">
 <meta property="og:description" content="世人万千种，浮云莫去求，斯人若彩虹，遇上方知有。">
 <meta property="og:locale" content="zh-Hans">
@@ -181,13 +181,13 @@
 
 
 
-  <link rel="canonical" href="https://yqxshiki.com/tags/Javascript/">
+  <link rel="canonical" href="https://yqxshiki.com/tags/javascript/">
 
 
 
 
 
-  <title>标签: Javascript | Scrook.Blog</title>
+  <title>标签: javascript | Scrook.Blog</title>
   
 
 
@@ -361,7 +361,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Javascript<small>标签</small>
+        <h1>javascript<small>标签</small>
         </h1>
       </div>
 
@@ -373,95 +373,17 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/原生JS实现回到顶部动画.html" itemprop="url">
+            <a class="post-title-link" href="/冒泡排序.html" itemprop="url">
               
-                <span itemprop="name">原生JS实现回到顶部动画</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-02-06T12:47:09+08:00" content="2020-02-06">
-          02-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/原生JS拖拽事件.html" itemprop="url">
-              
-                <span itemprop="name">原生JS拖拽事件</span>
+                <span itemprop="name">冒泡排序</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-26T12:00:24+08:00" content="2019-10-26">
-          10-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/后台管理系统vue-admin-webapp.html" itemprop="url">
-              
-                <span itemprop="name">后台管理系统 vue-admin-webapp</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-20T17:08:52+08:00" content="2019-10-20">
-          10-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/vue后台管理系统driver.html" itemprop="url">
-              
-                <span itemprop="name">前端 vue后台管理系统driver.js蒙版引导</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-16T10:06:12+08:00" content="2019-10-16">
-          10-16
+        <time class="post-time" itemprop="dateCreated" datetime="2020-08-14T17:25:39+08:00" content="2020-08-14">
+          08-14
         </time>
       </div>
 
@@ -523,7 +445,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -534,7 +456,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -545,7 +467,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -694,7 +616,7 @@ show_date_time();
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.5k</span>
+    <span title="Site words total count">8.8k</span>
   
 </div>
 
@@ -1156,6 +1078,89 @@ show_date_time();
           }
 
           if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+if ('auto' === 'auto') {
             input.addEventListener('input', inputEventFunction);
           } else {
             $('.search-icon').click(inputEventFunction);

@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[冒泡排序]]></title>
+    <url>%2F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html</url>
+    <content type="text"></content>
+      <categories>
+        <category>web前端</category>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[page]]></title>
+    <url>%2Fgulp%E7%9A%84%E4%BD%BF%E7%94%A8.html</url>
+    <content type="text"><![CDATA[安装 gulp 命令行工具1npm install -g gulp-cli 安装 gulp1npm install --save-dev gulp 创建 gulpfile.js 文件在项目的根目录创建 gulpfile.js 引入各种插件123456789101112131415161718192021222324const &#123; src, dest, series, watch &#125; = require('gulp')//src:读取文件//dest:输出文件// watch:监听文件// series:异步执行task// 压缩图片const imagemin = require('gulp-imagemin')//压缩cssconst csso = require('gulp-csso')// 文件合并const concat = require('gulp-concat')// 清除文件const clean = require('gulp-clean')// 提取共同部分const include = require('gulp-file-include')// 压缩htmlconst htmlmin = require('gulp-htmlmin')//压缩JSconst uglify = require('gulp-uglify')// 自动打开网页const open = require('open')// 搭建服务器const connect = require('gulp-connect') 创建各个 task123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354// img压缩function CompressPicture () &#123; src(['dist/images/**/*.jpg', 'dist/images/**/*.png', 'dist/images/**/*.jpeg']).pipe(clean()) return src(['images/**/*.jpg', 'images/**/*.png', 'images/**/*.jpeg']) .pipe(imagemin()) .pipe(dest('dist/images'))&#125;//CSS压缩function CompressCss () &#123; src('dist/css/*.css').pipe(clean()) return src('css/*.css') .pipe(csso()) .pipe(concat('main.css')) .pipe(dest('dist/css'))&#125;//html压缩function CommonHtml () &#123; src('dist/public/*.html').pipe(clean()) return src('public/*.html') .pipe(include()) .pipe( htmlmin(&#123; collapseWhitespace: true, minifyCSS: true, minifyJS: true &#125;)) .pipe(dest('dist/public'))&#125;// 开启服务器function webServer () &#123; connect.server(&#123; livereload: true, root: "./dist/public", port: 7777 &#125;) // 自动打开浏览器网页 await open('http:localhost:7777'), &#123; app: ['google chrome', '--incognito'] &#125; console.log('Working the "http:localhost:7777"')&#125;function start () &#123; return src('./dist/public/index.html') .pipe(connect.reload())&#125;function WatchFile () &#123; watch('./css/*.css', CompressCss) watch('./dist/public/index.html', start)&#125; 执行 task1234567exports.default = series( CompressPicture, CompressCss, CommonHtml, WatchFile, webServer)]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>前端自动化构建工具</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+        <tag>gulp</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[uniapp的request封装]]></title>
     <url>%2Funiapp%E7%9A%84request.html</url>
     <content type="text"><![CDATA[uniapp uni-app 是一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、H5、以及各种小程序（微信/支付宝/百度/头条/QQ/钉钉/淘宝）、快应用等多个平台。 uniapp官网 封装uni.request创建uni_url.js文件123456789let uni_url = ''if (process.env.NODE_ENV == "development") &#123; uni_url = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' // 开发环境&#125; else &#123; uni_url = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' //生产环境&#125;export default uni_url 创建uniRequest.js文化123456789101112131415161718192021import uni_url from './uni_url.js'export const $uniRequset = (data) =&gt; &#123; return new Promise((resolve, reject) =&gt; &#123; uni.request(&#123; url: uni_url + data.url, method: data.method || 'GET', data: data.data || '&#123;&#125;', success: (res) =&gt; &#123; resolve(res) &#125;, fail: (err) =&gt; &#123; uni.showToast(&#123; title: "请求接口失败!", icon: 'none' &#125;) reject(err) &#125; &#125;) &#125;)&#125; main.js注册12import $uniRequest from './uniRequest.js'Vue.prototype.$uniRequest = $uniRequest;]]></content>
@@ -8,9 +33,9 @@
         <category>小程序</category>
       </categories>
       <tags>
-        <tag>vue</tag>
         <tag>uniapp</tag>
         <tag>封装函数</tag>
+        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
@@ -41,8 +66,8 @@
         <category>SSR(服务器渲染)</category>
       </categories>
       <tags>
-        <tag>Nuxtjs</tag>
         <tag>vue</tag>
+        <tag>Nuxtjs</tag>
         <tag>webpack</tag>
       </tags>
   </entry>
@@ -107,8 +132,8 @@
         <category>图表</category>
       </categories>
       <tags>
-        <tag>Vue</tag>
         <tag>ECharts</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>
@@ -131,10 +156,10 @@
       </categories>
       <tags>
         <tag>Vue</tag>
+        <tag>element-ui</tag>
         <tag>Javascript</tag>
         <tag>echart</tag>
         <tag>fastmock</tag>
-        <tag>element-ui</tag>
         <tag>axios</tag>
       </tags>
   </entry>
