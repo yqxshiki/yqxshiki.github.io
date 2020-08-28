@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[冒泡排序]]></title>
     <url>%2F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html</url>
-    <content type="text"><![CDATA[冒泡排序]]></content>
+    <content type="text"><![CDATA[冒泡排序123456789101112131415161718let arr = [7, 21, 66, 851, 46, 72, 91, 11, 64];function bubbleSort(arr) &#123; let length = arr.length; for (let i = 0; i &lt; length - 1; i++) &#123; //每完成一个 比较数据就少一个 for (let j = 0; j &lt; length - 1 - i; j++) &#123; // 大数向右边移 if (arr[j] &gt; arr[j + 1]) &#123; //交换 temp = arr[j + 1]; arr[j + 1] = arr[j]; arr[j] = temp; &#125; &#125; &#125; return arr;&#125;]]></content>
       <categories>
         <category>web前端</category>
         <category>算法</category>
