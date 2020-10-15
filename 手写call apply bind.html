@@ -142,18 +142,18 @@
 
 
 
-<meta name="description" content="call()  apply()  bind() 都是用来改变this的指向的  call() 和apply()基本都差不多，但是call() 可以传入多个参数，apply()第二个参数必须是数组 call1   apply12  bind() 和call() apply()差不多，都是不会执行函数 bind12">
+<meta name="description" content="call() apply() bind() 都是用来改变 this 的指向的  call() 和 apply()基本都差不多，但是 call() 可以传入多个参数，apply()第二个参数必须是数组 call123456789101112131415161718Function.prototype._call = function (ctx) &amp;#123;  //ctx为传入的第一个参数  没有">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="手写call apply bind">
 <meta property="og:url" content="https://yqxshiki.gitee.io/手写call apply bind.html">
 <meta property="og:site_name" content="Scrook.Blog">
-<meta property="og:description" content="call()  apply()  bind() 都是用来改变this的指向的  call() 和apply()基本都差不多，但是call() 可以传入多个参数，apply()第二个参数必须是数组 call1   apply12  bind() 和call() apply()差不多，都是不会执行函数 bind12">
+<meta property="og:description" content="call() apply() bind() 都是用来改变 this 的指向的  call() 和 apply()基本都差不多，但是 call() 可以传入多个参数，apply()第二个参数必须是数组 call123456789101112131415161718Function.prototype._call = function (ctx) &amp;#123;  //ctx为传入的第一个参数  没有">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-08-28T08:36:57.898Z">
+<meta property="og:updated_time" content="2020-10-15T09:56:26.913Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手写call apply bind">
-<meta name="twitter:description" content="call()  apply()  bind() 都是用来改变this的指向的  call() 和apply()基本都差不多，但是call() 可以传入多个参数，apply()第二个参数必须是数组 call1   apply12  bind() 和call() apply()差不多，都是不会执行函数 bind12">
+<meta name="twitter:description" content="call() apply() bind() 都是用来改变 this 的指向的  call() 和 apply()基本都差不多，但是 call() 可以传入多个参数，apply()第二个参数必须是数组 call123456789101112131415161718Function.prototype._call = function (ctx) &amp;#123;  //ctx为传入的第一个参数  没有">
 
 
 
@@ -474,7 +474,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  63
+                  312
                 </span>
               
 
@@ -512,15 +512,15 @@
 
       
         <blockquote>
-<p>call()  apply()  bind() 都是用来改变this的指向的</p>
+<p>call() apply() bind() 都是用来改变 this 的指向的</p>
 </blockquote>
-<p><strong>call() 和apply()基本都差不多，但是call() 可以传入多个参数，apply()第二个参数必须是数组</strong></p>
-<h2 id="call"><a href="#call" class="headerlink" title="call"></a>call</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+<p><strong>call() 和 apply()基本都差不多，但是 call() 可以传入多个参数，apply()第二个参数必须是数组</strong></p>
+<h2 id="call"><a href="#call" class="headerlink" title="call"></a>call</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype._call = <span class="function"><span class="keyword">function</span> (<span class="params">ctx</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//ctx为传入的第一个参数  没有传就默认window</span></span><br><span class="line">  ctx = ctx || <span class="built_in">window</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//this 就是函数  把它当做一个属性或者方法 给ctx</span></span><br><span class="line">  <span class="comment">//   ctx.fun = this;</span></span><br><span class="line">  <span class="comment">//  避免ctx里面有fun  覆盖了</span></span><br><span class="line">  <span class="keyword">let</span> fun = <span class="built_in">Symbol</span>(<span class="string">"独一无二"</span>);</span><br><span class="line">  ctx[fun] = <span class="keyword">this</span>;</span><br><span class="line">  <span class="comment">//args 为除第一个参数外的参数</span></span><br><span class="line">  <span class="keyword">const</span> args = [...arguments].slice(<span class="number">1</span>);</span><br><span class="line">  <span class="comment">//执行函数</span></span><br><span class="line">  <span class="keyword">const</span> result = ctx[fun](...args);</span><br><span class="line">  <span class="comment">//删除方法</span></span><br><span class="line">  <span class="keyword">delete</span> ctx[fun];</span><br><span class="line">  <span class="comment">//返回</span></span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h2 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype._apply = <span class="function"><span class="keyword">function</span> (<span class="params">ctx</span>) </span>&#123;</span><br><span class="line">  ctx = ctx || <span class="built_in">window</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> fun = <span class="built_in">Symbol</span>(<span class="string">"独一无二"</span>);</span><br><span class="line">  ctx[fun] = <span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> result;</span><br><span class="line">  <span class="comment">//如果没有第二个参数 直接执行</span></span><br><span class="line">  <span class="keyword">if</span> (!<span class="built_in">arguments</span>[<span class="number">1</span>]) &#123;</span><br><span class="line">    result = ctx[fun]();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    result = ctx[fun](...arguments[<span class="number">1</span>]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">delete</span> ctx[fun];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p><strong>bind() 和call() apply()差不多，都是不会执行函数</strong></p>
-<h2 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>bind() 和 call() apply()差不多，都是不会执行函数</strong></p>
+<h2 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype._bind = <span class="function"><span class="keyword">function</span> (<span class="params">ctx</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> func = <span class="keyword">this</span>;</span><br><span class="line">  <span class="comment">//空函数</span></span><br><span class="line">  <span class="keyword">let</span> emptyFunc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//除一个参数外的参数</span></span><br><span class="line">  args = [...arguments].slice(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> temp = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//是否是构造函数</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> <span class="keyword">instanceof</span> temp) &#123;</span><br><span class="line">      func.apply(<span class="keyword">this</span>, args.concat([...arguments]));</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      func.apply(ctx, args.concat([...arguments]));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">//继承原函数原型链</span></span><br><span class="line">  emptyFunc.prototype = <span class="keyword">this</span>.prototype;</span><br><span class="line">  <span class="comment">//new   为了不改变 原函数</span></span><br><span class="line">  temp.prototype = <span class="keyword">new</span> emptyFunc();</span><br><span class="line">  <span class="keyword">return</span> temp;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -840,7 +840,7 @@ show_date_time();
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9k</span>
+    <span title="Site words total count">9.2k</span>
   
 </div>
 
