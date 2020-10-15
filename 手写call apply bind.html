@@ -129,7 +129,7 @@
 
 
 
-  <meta name="keywords" content="Vue,ECharts,">
+  <meta name="keywords" content="javascript,">
 
 
 
@@ -142,18 +142,18 @@
 
 
 
-<meta name="description" content="ECharts的介绍 ECharts，缩写来自 Enterprise Charts，商业级数据图表，是百度的一个开源的数据可视化工具，一个纯 Javascript 的图表库，能够在 PC 端和移动设备上流畅运行，兼容当前绝大部分浏览器（IE6/7/8/9/10/11，chrome，firefox，Safari等），底层依赖轻量级的 Canvas 库 ZRender，ECharts 提供直观，生动，">
-<meta name="keywords" content="Vue,ECharts">
+<meta name="description" content="call()  apply()  bind() 都是用来改变this的指向的  call() 和apply()基本都差不多，但是call() 可以传入多个参数，apply()第二个参数必须是数组 call1   apply12  bind() 和call() apply()差不多，都是不会执行函数 bind12">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ECharts的使用方法">
-<meta property="og:url" content="https://yqxshiki.gitee.io/echarts的使用方法.html">
+<meta property="og:title" content="手写call apply bind">
+<meta property="og:url" content="https://yqxshiki.gitee.io/手写call apply bind.html">
 <meta property="og:site_name" content="Scrook.Blog">
-<meta property="og:description" content="ECharts的介绍 ECharts，缩写来自 Enterprise Charts，商业级数据图表，是百度的一个开源的数据可视化工具，一个纯 Javascript 的图表库，能够在 PC 端和移动设备上流畅运行，兼容当前绝大部分浏览器（IE6/7/8/9/10/11，chrome，firefox，Safari等），底层依赖轻量级的 Canvas 库 ZRender，ECharts 提供直观，生动，">
+<meta property="og:description" content="call()  apply()  bind() 都是用来改变this的指向的  call() 和apply()基本都差不多，但是call() 可以传入多个参数，apply()第二个参数必须是数组 call1   apply12  bind() 和call() apply()差不多，都是不会执行函数 bind12">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-30T10:18:14.246Z">
+<meta property="og:updated_time" content="2020-08-28T08:36:57.898Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ECharts的使用方法">
-<meta name="twitter:description" content="ECharts的介绍 ECharts，缩写来自 Enterprise Charts，商业级数据图表，是百度的一个开源的数据可视化工具，一个纯 Javascript 的图表库，能够在 PC 端和移动设备上流畅运行，兼容当前绝大部分浏览器（IE6/7/8/9/10/11，chrome，firefox，Safari等），底层依赖轻量级的 Canvas 库 ZRender，ECharts 提供直观，生动，">
+<meta name="twitter:title" content="手写call apply bind">
+<meta name="twitter:description" content="call()  apply()  bind() 都是用来改变this的指向的  call() 和apply()基本都差不多，但是call() 可以传入多个参数，apply()第二个参数必须是数组 call1   apply12  bind() 和call() apply()差不多，都是不会执行函数 bind12">
 
 
 
@@ -183,13 +183,13 @@
 
 
 
-  <link rel="canonical" href="https://yqxshiki.gitee.io/echarts的使用方法.html">
+  <link rel="canonical" href="https://yqxshiki.gitee.io/手写call apply bind.html">
 
 
 
 
 
-  <title>ECharts的使用方法 | Scrook.Blog</title>
+  <title>手写call apply bind | Scrook.Blog</title>
   
 
 
@@ -370,7 +370,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yqxshiki.gitee.io/yqxshiki.github.io/echarts的使用方法.html">
+    <link itemprop="mainEntityOfPage" href="https://yqxshiki.gitee.io/yqxshiki.github.io/手写call apply bind.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Scrook">
@@ -387,7 +387,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ECharts的使用方法</h1>
+          <h1 class="post-title" itemprop="name headline">手写call apply bind</h1>
         
 
         <div class="post-meta">
@@ -399,8 +399,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T17:35:23+08:00">
-                2019-10-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-28T16:30:22+08:00">
+                2020-08-28
               </time>
             
 
@@ -433,8 +433,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/yqxshiki.github.io/categories/web前端/图表/" itemprop="url" rel="index">
-                    <span itemprop="name">图表</span>
+                  <a href="/yqxshiki.github.io/categories/web前端/手写系列/" itemprop="url" rel="index">
+                    <span itemprop="name">手写系列</span>
                   </a>
                 </span>
 
@@ -451,8 +451,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/yqxshiki.github.io/echarts的使用方法.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/yqxshiki.github.io/echarts的使用方法.html" itemprop="commentsCount"></span>
+                <a href="/yqxshiki.github.io/手写call apply bind.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/yqxshiki.github.io/手写call apply bind.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -474,7 +474,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  424
+                  63
                 </span>
               
 
@@ -511,35 +511,16 @@
       
 
       
-        <h2 id="ECharts的介绍"><a href="#ECharts的介绍" class="headerlink" title="ECharts的介绍"></a>ECharts的介绍</h2><blockquote>
-<p>ECharts，缩写来自 Enterprise Charts，商业级数据图表，是百度的一个开源的数据可视化工具，一个纯 Javascript 的图表库，能够在 PC 端和移动设备上流畅运行，兼容当前绝大部分浏览器（IE6/7/8/9/10/11，chrome，firefox，Safari等），底层依赖轻量级的 Canvas 库 ZRender，ECharts 提供直观，生动，可交互，可高度个性化定制的数据可视化图表。创新的拖拽重计算、数据视图、值域漫游等特性大大增强了用户体验，赋予了用户对数据进行挖掘、整合的能力</p>
+        <blockquote>
+<p>call()  apply()  bind() 都是用来改变this的指向的</p>
 </blockquote>
-<p><strong>ECharts官网<a href="https://www.echartsjs.com/zh/index.html" target="_blank" rel="noopener">点击进入</a></strong></p>
-<h2 id="无框架在HTML页面中使用"><a href="#无框架在HTML页面中使用" class="headerlink" title="无框架在HTML页面中使用"></a>无框架在HTML页面中使用</h2><h4 id="引入Echarts"><a href="#引入Echarts" class="headerlink" title="引入Echarts"></a>引入Echarts</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.bootcss.com/echarts/4.3.0-rc.2/echarts-en.common.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p><strong>call() 和apply()基本都差不多，但是call() 可以传入多个参数，apply()第二个参数必须是数组</strong></p>
+<h2 id="call"><a href="#call" class="headerlink" title="call"></a>call</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
 
-<h4 id="绘制一个DOM容器"><a href="#绘制一个DOM容器" class="headerlink" title="绘制一个DOM容器"></a>绘制一个DOM容器</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"myChart"</span> <span class="attr">style</span>=<span class="string">"width:100%;height:400px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h4 id="初始化Echarts实例"><a href="#初始化Echarts实例" class="headerlink" title="初始化Echarts实例"></a>初始化Echarts实例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myChart = echarts.init(<span class="built_in">document</span>.getElementById(<span class="string">"myChart"</span>));</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置图表的配置项个数据"><a href="#配置图表的配置项个数据" class="headerlink" title="配置图表的配置项个数据"></a>配置图表的配置项个数据</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">myChart.setOption(&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>或者</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> opation=&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">myChart.setOption(option);</span><br></pre></td></tr></table></figure>
-
-<h2 id="Vue中使用"><a href="#Vue中使用" class="headerlink" title="Vue中使用"></a>Vue中使用</h2><h4 id="先npm安装Echarts"><a href="#先npm安装Echarts" class="headerlink" title="先npm安装Echarts"></a>先npm安装Echarts</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install echarts --save</span><br></pre></td></tr></table></figure>
-
-<h4 id="引入Echarts-1"><a href="#引入Echarts-1" class="headerlink" title="引入Echarts"></a>引入Echarts</h4><p>可分为部分引入和全局引入</p>
-<p><strong>部分引入</strong><br>在需要使用Echarts图表的vue文件里面导入</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> echarts <span class="keyword">from</span> <span class="string">'echarts'</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>全局引入</strong><br>在main.js中引入,这样就可以再每个vue文件里面使用不需要每一个都引入。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> echarts <span class="keyword">from</span> <span class="string">'echarts'</span></span><br><span class="line">Vue.prototype.echarts = echarts</span><br></pre></td></tr></table></figure>
-
-<h4 id="绘制DOM容器"><a href="#绘制DOM容器" class="headerlink" title="绘制DOM容器"></a>绘制DOM容器</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"myChart"</span> <span class="attr">:style</span>=<span class="string">"&#123;width: '300px', height: '300px'&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="在methods中写实现方法"><a href="#在methods中写实现方法" class="headerlink" title="在methods中写实现方法"></a>在methods中写实现方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">    drawLine(</span><br><span class="line">        <span class="comment">//初始化化Echarts实例</span></span><br><span class="line">        <span class="keyword">let</span> myChart = <span class="keyword">this</span>.echarts.init(<span class="built_in">document</span>.getElementById(<span class="string">"myChart"</span>));</span><br><span class="line">         <span class="comment">//配置图表数据和配置项</span></span><br><span class="line">         myChart.setOption(&#123;</span><br><span class="line">           <span class="comment">//放数据</span></span><br><span class="line">        &#125;)</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="在页面渲染完成前展示"><a href="#在页面渲染完成前展示" class="headerlink" title="在页面渲染完成前展示"></a>在页面渲染完成前展示</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mounted() &#123;</span><br><span class="line">  <span class="keyword">this</span>.drawLine();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p><strong>bind() 和call() apply()差不多，都是不会执行函数</strong></p>
+<h2 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
       
@@ -553,38 +534,6 @@
       
           
 
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
-  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-
-  <p><span>本文标题:</span>ECharts的使用方法</p>
-  <p><span>文章作者:</span>Scrook</p>
-  <p><span>发布时间:</span>2019年10月30日 - 17:35:23</p>
-  <p><span>最后更新:</span>2019年10月30日 - 18:18:14</p>
-  <p><span>原始链接:</span><a href="/yqxshiki.github.io/echarts的使用方法.html" title="ECharts的使用方法">https://yqxshiki.gitee.io/echarts的使用方法.html</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://yqxshiki.gitee.io/echarts的使用方法.html" aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-    clipboard.on('success', $(function(){
-      $(".fa-clipboard").click(function(){
-        swal({   
-          title: "",   
-          text: '复制成功',   
-          html: false,
-          timer: 500,   
-          showConfirmButton: false
-        });
-      });
-    }));  
-</script>
-
       
   </div>
     
@@ -597,9 +546,7 @@
       
         <div class="post-tags">
           
-            <a href="/yqxshiki.github.io/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
-          
-            <a href="/yqxshiki.github.io/tags/ECharts/" rel="tag"><i class="fa fa-tag"></i> ECharts</a>
+            <a href="/yqxshiki.github.io/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
           
         </div>
       
@@ -612,8 +559,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/yqxshiki.github.io/原生JS拖拽事件.html" rel="next" title="原生JS拖拽事件">
-                <i class="fa fa-chevron-left"></i> 原生JS拖拽事件
+              <a href="/yqxshiki.github.io/冒泡排序.html" rel="next" title="冒泡排序">
+                <i class="fa fa-chevron-left"></i> 冒泡排序
               </a>
             
           </div>
@@ -621,10 +568,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/yqxshiki.github.io/Vuemusic.html" rel="prev" title="vue-music 仿网易云移动端">
-                vue-music 仿网易云移动端 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -823,7 +766,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ECharts的介绍"><span class="nav-number">1.</span> <span class="nav-text">ECharts的介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无框架在HTML页面中使用"><span class="nav-number">2.</span> <span class="nav-text">无框架在HTML页面中使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#引入Echarts"><span class="nav-number">2.0.1.</span> <span class="nav-text">引入Echarts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绘制一个DOM容器"><span class="nav-number">2.0.2.</span> <span class="nav-text">绘制一个DOM容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化Echarts实例"><span class="nav-number">2.0.3.</span> <span class="nav-text">初始化Echarts实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置图表的配置项个数据"><span class="nav-number">2.0.4.</span> <span class="nav-text">配置图表的配置项个数据</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue中使用"><span class="nav-number">3.</span> <span class="nav-text">Vue中使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#先npm安装Echarts"><span class="nav-number">3.0.1.</span> <span class="nav-text">先npm安装Echarts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引入Echarts-1"><span class="nav-number">3.0.2.</span> <span class="nav-text">引入Echarts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绘制DOM容器"><span class="nav-number">3.0.3.</span> <span class="nav-text">绘制DOM容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在methods中写实现方法"><span class="nav-number">3.0.4.</span> <span class="nav-text">在methods中写实现方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在页面渲染完成前展示"><span class="nav-number">3.0.5.</span> <span class="nav-text">在页面渲染完成前展示</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#call"><span class="nav-number">1.</span> <span class="nav-text">call</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#apply"><span class="nav-number">2.</span> <span class="nav-text">apply</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bind"><span class="nav-number">3.</span> <span class="nav-text">bind</span></a></li></ol></div>
             
 
           </div>
