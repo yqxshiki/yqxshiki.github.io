@@ -149,5 +149,9 @@ image_minifier:
   pngquant: false
   progressive: false
 
-
+backup:
+    type: git
+    repository:
+       github: git@github.com:yqxshiki/yqxshiki.github.io.git,hexo
+      #  gitcafe: git@github.com:xxx/xxx.git,branchName
 
